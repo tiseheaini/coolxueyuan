@@ -2,3 +2,24 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+body {
+  background-image:url(5752.png);
+}
+#main {
+}
+#header{
+  background-color:#D0E7F1;
+  height: 102px;
+  margin:0 auto;
+}
+#content{
+  margin:0 auto;
+  background-image:url(5106.png);
+  background-repeat:repeat-x;
+}
+#footer{
+  background-color: yellow;
+  width: 1005px;
+  height: 83px;
+  margin:0 auto;
+}

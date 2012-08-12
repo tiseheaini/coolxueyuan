@@ -1,0 +1,26 @@
+#header-wrap {
+  width: 1005px;
+  height: 75px;
+  margin:0 auto;
+}
+#header-fir {
+  float: left;
+  width: 560px;
+  height: 75px;
+}
+#img-fir {
+  float: left;
+}
+#img-sec {
+  float: right;
+}
+#header-sec {
+  width: 985px;
+  background-image:url(header/chengdeyixueyuanbackground.gif);
+  background-repeat:no-repeat;
+  background-position:254px 0px;
+  height: 75px;
+}
+#img-thr {
+  float: right;
+}
