@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
 
-  validates :username, :nickname, :password, :password_confirmation, :presence => true
+  validates :nickname, :password, :password_confirmation, :presence => true
+  validates :username, :presence => {:message => "you"}
   validates :username, :uniqueness => true
 	validates :password, :confirmation => true
 

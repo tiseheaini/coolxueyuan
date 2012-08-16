@@ -11,3 +11,151 @@
  *= require_self
  *= require_tree .
  */
+body {
+  background-image:url(5752.png);
+}
+#main {
+}
+#header{
+  background-color:#D0E7F1;
+  height: 102px;
+  margin:0 auto;
+}
+#content{
+  margin:0 auto;
+  background-image:url(5106.png);
+  background-repeat:repeat-x;
+}
+#footer{
+  background-color: yellow;
+  width: 1005px;
+  height: 83px;
+  margin:0 auto;
+}
+
+/* home#index */
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+margin: 0;
+padding: 0;
+}
+#c-wrap {
+  width: 1005px;
+  overflow:hidden;
+  margin:0 auto;
+}
+#wrap-left{
+  float: left;
+  width: 640px;
+}
+#left-content{
+  width: 620px;
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+#left-content-top {
+  width: 620px;
+  height: 15px;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:no-repeat;
+}
+#left-content-cent {
+  width: 620px;
+  overflow:hidden;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:repeat-y;
+  background-position: -1400px 0px;
+}
+#left-content-bottom {
+  width: 620px;
+  height: 15px;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:no-repeat;
+  background-position: -700px bottom;
+}
+.feed-list {
+  width: 620px;
+}
+.list-single {
+  width: 620px;
+}
+.list-face {
+  width: 64px;
+  height: 64px;
+  background-color: black;
+  position:relative;
+  top: 16px;
+  left: 21px;
+  z-index: 1;
+}
+.list-content {
+  width: 500px;
+  height: 300px;
+  background-color: green;
+  position:relative;
+  top: -20px;
+  left: 54px;
+}
+#wrap-right{
+  float: right;
+  width: 355px;
+  height: 415px;
+}
+#right-sidebar{
+  width: 280px;
+  height: 450px;
+  margin-top: 25px;
+  margin-left: 28px;
+}
+
+
+.sidebar-login {
+  width: 280px;
+}
+.login-top {
+  width: 280px;
+  height: 15px;
+  background-image:url(rightsidebarbackground.png);
+  background-repeat:no-repeat;
+}
+.login-cent {
+  width: 280px;
+  background-image:url(rightsidebarbackground.png);
+  background-repeat:repeat-y;
+  background-position: -600px 0px;
+}
+.login-bottom {
+  width: 280px;
+  height: 15px;
+  background-image:url(rightsidebarbackground.png);
+  background-repeat:no-repeat;
+  background-position: -300px bottom;
+}
+
+/* home-header */
+#header-wrap {
+  width: 1005px;
+  height: 75px;
+  margin:0 auto;
+}
+#header-fir {
+  float: left;
+  width: 560px;
+  height: 75px;
+}
+#img-fir {
+  float: left;
+}
+#img-sec {
+  float: right;
+}
+#header-sec {
+  width: 985px;
+  background-image:url(header/chengdeyixueyuanbackground.gif);
+  background-repeat:no-repeat;
+  background-position:254px 0px;
+  height: 75px;
+}
+#img-thr {
+  float: right;
+}
