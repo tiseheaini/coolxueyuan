@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 
   # 此处用动词形式(authenticate)更加合适, 特此说明一下. 感谢 Chen Kai 同学的提醒.
   def self.authentication(login, password)
-    user = User.find_by_login(login)
+    user = User.find_by_username(login)
     if user && Digest::SHA256.hexdigest(password + user.password_salt) == user.password_hash
       return user
     end
