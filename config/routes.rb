@@ -1,5 +1,7 @@
 Coolxueyuan::Application.routes.draw do
 
+  resources :topics
+
   resources :login, :only => [:new, :create]
   resources :users, :only => [:new, :create]
 

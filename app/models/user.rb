@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :topics
+
   attr_accessible :gender, :nickname, :password_hash, :passwork_salt, :qq, :schooldate, :username, :password, :password_confirmation
 
   attr_accessor :password_confirmation
