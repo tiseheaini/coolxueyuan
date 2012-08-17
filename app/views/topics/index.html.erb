@@ -2,8 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Node</th>
     <th>Title</th>
     <th>Text</th>
     <th></th>
@@ -13,8 +11,6 @@
 
 <% @topics.each do |topic| %>
   <tr>
-    <td><%= topic.user_id %></td>
-    <td><%= topic.node_id %></td>
     <td><%= topic.title %></td>
     <td><%= topic.text %></td>
     <td><%= link_to 'Show', topic %></td>
