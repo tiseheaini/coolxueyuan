@@ -38,35 +38,35 @@ body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre
 margin: 0;
 padding: 0;
 }
-#c-wrap {
+.c-wrap {
   width: 1005px;
   overflow:hidden;
   margin:0 auto;
 }
-#wrap-left{
+.wrap-left{
   float: left;
   width: 640px;
 }
-#left-content{
+.left-content{
   width: 620px;
   margin-top: 25px;
   margin-left: 30px;
   margin-bottom: 5px;
 }
-#left-content-top {
+.left-content-top {
   width: 620px;
   height: 15px;
   background-image:url(leftcontentbackground.png);
   background-repeat:no-repeat;
 }
-#left-content-cent {
+.left-content-cent {
   width: 620px;
   overflow:hidden;
   background-image:url(leftcontentbackground.png);
   background-repeat:repeat-y;
   background-position: -1400px 0px;
 }
-#left-content-bottom {
+.left-content-bottom {
   width: 620px;
   height: 15px;
   background-image:url(leftcontentbackground.png);
@@ -96,12 +96,12 @@ padding: 0;
   top: -20px;
   left: 54px;
 }
-#wrap-right{
+.wrap-right{
   float: right;
   width: 355px;
   height: 415px;
 }
-#right-sidebar{
+.right-sidebar{
   width: 280px;
   height: 450px;
   margin-top: 25px;
