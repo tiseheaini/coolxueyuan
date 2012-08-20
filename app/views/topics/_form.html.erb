@@ -19,6 +19,9 @@
     <%= f.text_area :text %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+		<div id="submit-cont">
+        <%= f.submit "确认发布" %>
+				<div class="link-h"><%= link_to "返回", home_index_path %></div>
+		</div>
   </div>
 <% end %>

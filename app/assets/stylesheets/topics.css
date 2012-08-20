@@ -17,3 +17,22 @@
 	margin-left: 33px;
 	margin-top: 5px;
 }
+
+#submit-cont {
+  width: 181px;
+	height: 30px;
+	margin-left: 343px;
+}
+#new_topic #submit-cont input {
+  width: 93px;
+	height: 30px;
+	float: left;
+}
+.link-h {
+  width: 43px;
+  height: 23px;
+	float: right;
+	padding-top: 7px;
+	padding-left: 17px;
+	background-color: black;
+}
