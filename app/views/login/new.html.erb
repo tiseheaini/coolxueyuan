@@ -1,12 +1,10 @@
 <h1>Admin Login</h1>
-<%= flash[:notice] %>
-<%= form_tag login_index_path do -%>
-  <label for="login">Login</label>
-	  <%= text_field_tag :login, params[:login] %>
-  <label for="password">Password</label>
-	  <%= password_field_tag :password, params[:password] %>
-			  
-	  <%= submit_tag "Login"%>
-<% end %>
-
-
+    <div class="wrap-left">
+    	<div class="left-content">
+    		<div class="left-content-top"></div>
+    		<div class="left-content-cent">
+            <%= render 'form' %>
+				</div>
+    		<div class="left-content-bottom"></div>
+    	</div>
+    </div>

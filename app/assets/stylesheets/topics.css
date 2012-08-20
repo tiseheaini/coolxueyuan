@@ -2,3 +2,18 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+#new_topic .field label {
+	margin-left: 30px;
+  font-size: 18px;
+}
+#topic_title {
+  width: 489px;
+	height: 26px;
+	margin-top: 5px;
+	margin-left: 33px;
+}
+#topic_text {
+  width: 489px;
+	margin-left: 33px;
+	margin-top: 5px;
+}
