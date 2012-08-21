@@ -1,5 +1,7 @@
 Coolxueyuan::Application.routes.draw do
 
+  get "school/index"
+
   resources :topics do
     resources :replies
 	end
