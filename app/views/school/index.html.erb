@@ -3,12 +3,22 @@
         <div class="left-content-top"></div>
         
         <div class="left-content-cent">
+				    <% @school.each do |school| %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face">aaaaa</div>
-                        <div class="list-content">bbbbb</div>
+                        <div class="list-face"><%= school.title %></div>
+                            <div class="list-content">
+												        <%= school.title %><br />
+																<%= school.text %><%= school.text %><%= school.text %>
+																<%= school.text %><%= school.text %><%= school.text %>
+																<%= school.text %><%= school.text %><%= school.text %>
+																<%= school.text %><%= school.text %><%= school.text %>
+																<%= school.text %><%= school.text %><%= school.text %>
+												    </div>
                 </div>
 					  </div>
+						<div class="line"></div>
+						<% end %>
         </div>
             
         <div class="left-content-bottom"></div>

@@ -50,7 +50,7 @@ padding: 0;
 .left-content{
   width: 620px;
   margin-top: 40px;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-bottom: 5px;
 }
 .left-content-top {
@@ -89,13 +89,19 @@ padding: 0;
   z-index: 1;
 }
 .list-content {
-  width: 500px;
-  height: 300px;
+  width: 490px;
+  height: auto;
   background-color: green;
   position:relative;
-  top: -20px;
-  left: 54px;
+  top: -30px;
+  left: 94px;
 }
+.line {
+  width: 547px;
+  border-top:1px solid #E1E1E1;
+	margin-left: 30px;
+}
+
 .wrap-right{
   float: right;
   width: 355px;
@@ -104,7 +110,7 @@ padding: 0;
 .right-sidebar{
   width: 280px;
   height: 450px;
-  margin-top: 25px;
+  margin-top: 40px;
   margin-left: 28px;
 }
 
