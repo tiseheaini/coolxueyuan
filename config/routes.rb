@@ -9,7 +9,8 @@ Coolxueyuan::Application.routes.draw do
   resources :login, :only => [:new, :create]
   resources :users, :only => [:new, :create]
 
-  get "home/index"
+  get  "home/index"
+	post "home/login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

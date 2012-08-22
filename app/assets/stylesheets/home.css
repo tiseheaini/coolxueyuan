@@ -23,3 +23,30 @@ body {
   height: 83px;
   margin:0 auto;
 }
+.mess-frame {
+  width: 280px;
+	height: 20px;
+	padding-left: 15px;
+	margin-bottom: 6px;
+}
+.form-line {
+  width: 280px;
+	border-top:1px solid #E1E1E1;
+	margin-top: 6px;
+	margin-bottom: 12px;
+}
+#login,#password {
+  width: 213px;
+	height: 25px;
+	margin-left: 0px;
+	margin-bottom: 8px;
+}
+.form-submit {
+  width: 59px;
+	height: 28px;
+	margin-left: 208px;
+	margin-top: 2px;
+}
+.form-label {
+  margin-left: 15px;
+}
