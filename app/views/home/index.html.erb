@@ -3,12 +3,18 @@
         <div class="left-content-top"></div>
         
         <div class="left-content-cent">
+				    <% @topic.each do |topic| %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face">aaaaa</div>
-                        <div class="list-content">bbbbb</div>
+                        <div class="list-face"><%= topic.title %></div>
+                            <div class="list-content">
+												        <%= topic.title %><br />
+																<%= topic.text %>
+												    </div>
                 </div>
 					  </div>
+						<div class="line"></div>
+						<% end %>
         </div>
             
         <div class="left-content-bottom"></div>
