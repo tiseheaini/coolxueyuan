@@ -53,3 +53,22 @@ body {
 .form-sign {
   margin-left: 167px;
 }
+
+/* _user_info.html.erb */
+.user-info {
+  overflow:hidden;
+}
+#user-face {
+  width: 64px;
+	height: 64px;
+	margin-left: 13px;
+	float: left;
+	background-color: black;
+}
+#user-mess {
+  width: 195px;
+	height: 92px;
+	float:right;
+	margin-right: 5px;
+	background-color:#778087;
+}

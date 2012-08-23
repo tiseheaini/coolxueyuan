@@ -27,10 +27,22 @@
         <div class="sidebar-login">
            	<div class="login-top"></div>
            	    <div class="login-cent">
-                    <%= render 'form_login' %>
+								    <% if session[:user_id] %>
+										  <%= render :partial => "user_info", :object => @user %>
+									  <% else %>
+                      <%= render :partial => "form_login" %>
+									  <% end %>
                 </div>
           	<div class="login-bottom"></div>
         </div>
+
+				<div class="sidebar-node">
+					  <div class="node-top"></div>
+					      <div class="node-cent">
+						        
+						    </div>
+					  <div class="node-bottom"></div>
+				</div>
           
     </div>  
 </div>
