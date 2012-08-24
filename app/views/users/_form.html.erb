@@ -1,47 +1,48 @@
+<div class="mess-frame">
+    <span>注册</span>
+</div>
+<div class="form-line"></div>
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+    <div class="error-mess-box">
+      <% @user.errors.each do |attr,msg| %>
+        <div class="error-list"><%= msg %></div><br />
       <% end %>
-      </ul>
     </div>
-  <% end %>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+	  <div class="user-label"><%= f.label :username, "用户名：" %></div>
+    <%= f.text_field :username, :class => "user-input" %>
   </div>
   <div class="field">
-    <%= f.label :nickname %><br />
-    <%= f.text_field :nickname %>
+		<div class="user-label"><%= f.label :nickname, "昵称：" %></div>
+    <%= f.text_field :nickname, :class => "user-input" %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+	  <div class="user-label"><%= f.label :password, "密码：" %></div>
+    <%= f.password_field :password, :class => "user-input" %>
   </div>
   <div class="field">
-    <%= f.label :passwork_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+	  <div class="user-label"><%= f.label :passwork_confirmation, "再输入一遍：" %></div>
+    <%= f.password_field :password_confirmation, :class => "user-input" %>
   </div>
   <div class="field">
+	<div class="user-label"><%= f.label :gender, "性别：" %></div>
+	  <div class="user-radio">
     <%= f.radio_button :gender,0 %>
-    <%= f.label :男 %><br />
+    <%= f.label :男 %>
     <%= f.radio_button :gender,1 %>
-    <%= f.label :女 %><br />
+    <%= f.label :女 %>
+		</div>
   </div>
   <div class="field">
-    <%= f.label :qq %><br />
-    <%= f.text_field :qq %>
+	  <div class="user-label"><%= f.label :qq, "QQ：" %></div>
+    <%= f.text_field :qq, :class => "user-input" %>
   </div>
   <div class="field">
-    <%= f.label :schooldate %><br />
-    <%= f.text_field :schooldate %>
+	  <div class="user-label"><%= f.label :schooldate, "入学时间：" %></div>
+    <%= f.text_field :schooldate, :class => "user-input" %>
   </div>
   <div class="actions">
-    <%= f.submit 'submit' %>
+    <%= f.submit "注册", :class => "user-submit" %>
   </div>
 <% end %>

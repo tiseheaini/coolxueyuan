@@ -43,15 +43,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
 
-    respond_to do |format|
       if @user.save
 			  session[:user_id] = @user.id
-				format.html { redirect_to home_index_path, notice: 'Product was successfully created.' }
+			  redirect_to home_index_path
       else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render(:action => :new)
       end
-    end
   end
 
   # PUT /users/1

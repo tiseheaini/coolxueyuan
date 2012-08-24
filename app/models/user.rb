@@ -1,3 +1,4 @@
+# encoding: utf-8
 class User < ActiveRecord::Base
   has_many :topics
 
@@ -5,10 +6,10 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
 
-  validates :nickname, :password, :password_confirmation, :presence => true
-  validates :username, :presence => {:message => "you"}
-  validates :username, :uniqueness => true
-	validates :password, :confirmation => true
+  validates :username, :presence => {:message => "用户名不能为空"}
+	validates :nickname, :presence => {:message => "昵称不能是空的"}
+  validates :username, :uniqueness => {:message => "用户名已经有人注册过了"}
+	validates :password, :confirmation => {:message => "两次输入的密码不一样"}
 
   def password
     @password
