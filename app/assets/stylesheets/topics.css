@@ -15,13 +15,15 @@
 #topic_text {
   width: 489px;
 	margin-left: 33px;
-	margin-top: 5px;
+	margin-top: 13px;
 }
 
 #submit-cont {
-  width: 178px;
+  width: 163px;
 	height: 30px;
-	margin-left: 346px;
+	margin-left: 373px;
+	margin-top: 11px;
+	margin-bottom: 10px;
 }
 #new_topic #submit-cont input {
   width: 90px;
@@ -34,5 +36,4 @@
 	float: right;
 	padding-top: 7px;
 	padding-left: 17px;
-	background-color: black;
 }

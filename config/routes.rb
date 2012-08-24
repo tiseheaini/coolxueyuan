@@ -2,7 +2,7 @@ Coolxueyuan::Application.routes.draw do
 
   get "school/index"
 
-  resources :topics do
+  resources :topics, :except => :index do
     resources :replies
 	end
 
