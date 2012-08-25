@@ -1,14 +1,17 @@
 Coolxueyuan::Application.routes.draw do
 
+  get "login/signout"
+
   get "school/index"
 
   resources :topics, :except => :index do
     resources :replies
 	end
 
-  resources :login, :only => [:new, :create]
+  resources :logins, :only => [:new, :create]
   resources :users, :only => [:new, :create]
 
+	get  "home/signout"
   get  "home/index"
 	post "home/login"
 

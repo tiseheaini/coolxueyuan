@@ -17,4 +17,9 @@ class HomeController < ApplicationController
 			redirect_to new_login_path
 	  end
   end
+
+  def signout
+	  session[:user_id] = nil
+		redirect_to :back
+	end
 end
