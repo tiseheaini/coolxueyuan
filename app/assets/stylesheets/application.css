@@ -13,6 +13,7 @@
  */
 body {
   background-image:url(5752.png);
+	color: #333;
 }
 #main {
 }
@@ -27,7 +28,6 @@ body {
   background-repeat:repeat-x;
 }
 #footer{
-  background-color: yellow;
   width: 1005px;
   height: 83px;
   margin:0 auto;
@@ -140,4 +140,11 @@ padding: 0;
 }
 #img-thr {
   float: right;
+}
+
+/* div#footer */
+#footer-wrap {
+  width: 1005px;
+	margin-top: 16px;
+	margin-left: 24px;
 }

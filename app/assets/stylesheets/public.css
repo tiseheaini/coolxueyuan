@@ -87,7 +87,11 @@
   height: 28px;
 	text-decoration: none;
 	display:inline-block;
+  cursor: auto;
 }
+.sidebar-node a:link,a:visited {             
+  color: #006BB8;                
+}   
 .node-nav {
 	padding-top: 5px;
   padding-left: 21px;
