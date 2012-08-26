@@ -3,13 +3,13 @@
         <div class="left-content-top"></div>
         
         <div class="left-content-cent">
-				    <% @topic.each do |topic| %>
+				    <% @topic.each do |node| %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face"><%= topic.title %></div>
+                        <div class="list-face"><%= node.title %></div>
                             <div class="list-content">
-												        <%= topic.title %><br />
-																<%= topic.text %>
+												        <%= node.title %><br />
+																<%= node.text %>
 												    </div>
                 </div>
 					  </div>

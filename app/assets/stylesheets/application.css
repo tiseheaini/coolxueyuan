@@ -114,30 +114,6 @@ padding: 0;
   margin-left: 28px;
 }
 
-
-.sidebar-login {
-  width: 280px;
-}
-.login-top {
-  width: 280px;
-  height: 15px;
-  background-image:url(rightsidebarbackground.png);
-  background-repeat:no-repeat;
-}
-.login-cent {
-  width: 280px;
-  background-image:url(rightsidebarbackground.png);
-  background-repeat:repeat-y;
-  background-position: -600px 0px;
-}
-.login-bottom {
-  width: 280px;
-  height: 15px;
-  background-image:url(rightsidebarbackground.png);
-  background-repeat:no-repeat;
-  background-position: -300px bottom;
-}
-
 /* home-header */
 #header-wrap {
   width: 1005px;

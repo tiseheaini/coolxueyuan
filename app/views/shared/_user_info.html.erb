@@ -1,0 +1,15 @@
+<div class="mess-frame">
+	<span>信息</span>
+</div>
+<div class="form-line"></div>
+
+<div class="user-info">
+    <div id="user-face"></div>
+    <div id="user-mess">
+		    <span><%= @user.nickname %></span><br />
+		    <span>你有N条消息</span><br />
+		</div>
+		<div id="sub-sign-out">
+		    <%= link_to "退出", home_signout_path %>
+		</div>
+</div>

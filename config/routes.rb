@@ -1,14 +1,14 @@
 Coolxueyuan::Application.routes.draw do
 
-  get "login/signout"
-
   get "school/index"
+
+  match "school/node:id" => "school#node", :as => :node_school
 
   resources :topics, :except => :index do
     resources :replies
 	end
 
-  resources :logins, :only => [:new, :create]
+  resources :login, :only => [:new, :create]
   resources :users, :only => [:new, :create]
 
 	get  "home/signout"

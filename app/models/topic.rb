@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Topic < ActiveRecord::Base
   belongs_to :user
+	belongs_to :node, :counter_cache => true
 
   attr_accessible :node_id, :text, :title, :user_id
 
