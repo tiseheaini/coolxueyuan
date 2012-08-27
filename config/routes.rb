@@ -1,7 +1,5 @@
 Coolxueyuan::Application.routes.draw do
 
-  get "school/index"
-
   match "school/node:id" => "school#node", :as => :node_school
 
   resources :topics, :except => :index do
