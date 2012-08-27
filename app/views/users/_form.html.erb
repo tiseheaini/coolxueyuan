@@ -38,9 +38,13 @@
 	  <div class="user-label"><%= f.label :qq, "QQ：" %></div>
     <%= f.text_field :qq, :class => "user-input" %>
   </div>
+	<div class="field">
+	  <div class="user-label"><%= f.label :node_id, "院系：" %></div>
+		<%= f.select :node_id, select_array %>
+	</div>
   <div class="field">
 	  <div class="user-label"><%= f.label :schooldate, "入学时间：" %></div>
-    <%= f.text_field :schooldate, :class => "user-input" %>
+    <%= f.select :schooldate, (1997..2012), :class => "user-input" %>
   </div>
   <div class="actions">
     <%= f.submit "注册", :class => "user-submit" %>

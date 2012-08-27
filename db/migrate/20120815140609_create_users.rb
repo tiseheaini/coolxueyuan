@@ -4,9 +4,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username, :null => false
       t.string :nickname
       t.string :password_hash, :null => false
-      t.string :passwork_salt, :null => false
+      t.string :password_salt, :null => false
       t.boolean :gender
       t.string :qq
+			t.string :node_id,       :null => false
       t.string :schooldate
 
       t.timestamps
