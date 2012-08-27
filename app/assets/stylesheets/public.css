@@ -1,3 +1,75 @@
+/* div.wrap-left */
+.wrap-left{
+  float: left;
+  width: 640px;
+}
+.left-content{
+  width: 620px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.left-content-top {
+  width: 620px;
+  height: 15px;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:no-repeat;
+}
+.left-content-cent {
+  width: 620px;
+	min-height: 200px;
+  overflow:hidden;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:repeat-y;
+  background-position: -1400px 0px;
+}
+.left-content-bottom {
+  width: 620px;
+  height: 15px;
+  background-image:url(leftcontentbackground.png);
+  background-repeat:no-repeat;
+  background-position: -700px bottom;
+}
+.feed-list {
+  width: 620px;
+}
+.list-single {
+  width: 620px;
+}
+.list-face {
+  width: 64px;
+  height: 64px;
+  background-color: black;
+  position:relative;
+  top: 16px;
+  left: 21px;
+  z-index: 1;
+}
+.list-content {
+  width: 490px;
+  height: auto;
+  position:relative;
+  top: -30px;
+  left: 94px;
+}
+.line {
+  width: 547px;
+  border-top:1px solid #E1E1E1;
+	margin-left: 30px;
+	margin-bottom: 6px;
+}
+
+.wrap-right{
+  float: right;
+  width: 355px;
+  height: 415px;
+}
+.right-sidebar{
+  width: 280px;
+  height: 450px;
+  margin-top: 40px;
+  margin-left: 28px;
+}
 /* sidebar */
 .sidebar-login {
   width: 100%;

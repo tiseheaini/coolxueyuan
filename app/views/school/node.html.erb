@@ -27,10 +27,10 @@
         <div class="sidebar-login">
            	<div class="sidebar-top"></div>
            	    <div class="sidebar-cent">
-								    <% if session[:user_id] %>
-										  <%= render :partial => "shared/user_info", :object => @user %>
+								    <% if current_user %>
+										  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
 									  <% else %>
-                      <%= render :partial => "shared/form_login" %>
+                      <%= render :partial => "shared/sidebar/form_login" %>
 									  <% end %>
                 </div>
           	<div class="sidebar-bottom"></div>
@@ -39,7 +39,7 @@
 				<div class="sidebar-node">
 					  <div class="sidebar-top"></div>
 					      <div class="sidebar-cent">
-								  <%= render :partial => "shared/node_nav" %>
+								  <%= render :partial => "shared/sidebar/node_nav" %>
 						    </div>
 					  <div class="sidebar-bottom"></div>
 				</div>

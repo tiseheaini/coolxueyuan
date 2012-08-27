@@ -2,9 +2,6 @@
 class HomeController < ApplicationController
   def index
 	  @topic = Topic.order("created_at DESC").limit(5)
-		if session[:user_id]
-		  @user = User.find(session[:user_id])
-		end
   end
   
 	def login

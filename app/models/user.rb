@@ -1,6 +1,7 @@
 # encoding: utf-8
 class User < ActiveRecord::Base
   has_many :topics
+	belongs_to :node
 
   attr_accessible :node_id, :gender, :nickname, :password_hash, :password_salt, :qq, :schooldate, :username, :password, :password_confirmation
 

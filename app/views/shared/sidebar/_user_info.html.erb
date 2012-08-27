@@ -8,6 +8,7 @@
     <div id="user-mess">
 		    <span><%= @user.nickname %></span><br />
 		    <span>你有N条消息</span><br />
+				<span>进入我的社区<%= link_to "#{@user.node.name}", node_school_path(@user.node_id) %></span>
 		</div>
 		<div id="sub-sign-out">
 		    <%= link_to "退出", home_signout_path %>
