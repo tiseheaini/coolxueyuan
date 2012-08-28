@@ -71,30 +71,6 @@ padding: 0;
 #img-thr {
   float: right;
 }
-/* div#home-nav */
-#home-nav {
-  width: 937px;
-  height: 39px;
-  margin-left: 20px;
-  margin-top: 27px;
-}
-#home-nav-top{
-  width: 100%;
-  height: 10px;
-  background-repeat:no-repeat;
-}
-#home-nav-cont{
-  width: 100%;
-  background-image:url(homenavbackground.gif);
-  background-repeat:repeat-y;
-}
-#home-nav-bottom{
-  width: 100%;
-  height: 10px;
-  background-image:url(homenavbackground.gif);
-  background-repeat:no-repeat;
-  background-position:0 bottom;
-}
 
 /* div#footer */
 #footer-wrap {

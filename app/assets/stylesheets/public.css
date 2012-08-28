@@ -1,3 +1,36 @@
+/* div#home-nav */
+#home-nav {
+  width: 937px;
+  height: 39px;
+  margin-left: 20px;
+  margin-top: 27px;
+}
+#home-nav-top{
+  width: 100%;
+  height: 10px;
+  background-image:url(homenavbackground.gif);
+  background-repeat:no-repeat;
+}
+#home-nav-cont{
+  width: 100%;
+  background-image:url(homenavbackground.gif);
+  background-repeat:repeat-y;
+	background-position:-2000px 0px;
+	padding-left: 20px;
+}
+#home-nav-cont a {
+	text-decoration: none;
+	display:inline-block;
+  cursor: auto;
+}
+#home-nav-bottom{
+  width: 100%;
+  height: 10px;
+  background-image:url(homenavbackground.gif);
+  background-repeat:no-repeat;
+  background-position:-1000px bottom;
+}
+
 /* div.wrap-left */
 .wrap-left{
   float: left;
