@@ -26,6 +26,7 @@ class TopicsController < ApplicationController
   # GET /topics/new.json
   def new
     @topic = Topic.new
+		flash[:node] = params[:node]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,18 +43,14 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(params[:topic])
-		@topic.user_id = @user
-		@topic.node_id = @node
+		@topic.user_id = session[:user_id]
+		@topic.node_id = flash[:node]
 
-    respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
-        format.json { render json: @topic, status: :created, location: @topic }
+        redirect_to home_index_path
       else
-        format.html { render action: "new" }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
+        render(:action => :new)
       end
-    end
   end
 
   # PUT /topics/1
