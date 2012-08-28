@@ -5,6 +5,10 @@
   margin-left: 20px;
   margin-top: 27px;
 }
+.dividr {
+  margin-left: 5px;
+	margin-right: 5px;
+}
 #home-nav-top{
   width: 100%;
   height: 10px;
@@ -38,7 +42,7 @@
 }
 .left-content{
   width: 620px;
-  margin-top: 40px;
+  margin-top: 25px;
   margin-left: 20px;
   margin-bottom: 5px;
 }
@@ -188,13 +192,13 @@
 }
 
 /* sidebar-node */
-.sidebar-node a {
+.right-sidebar a {
   height: 28px;
 	text-decoration: none;
 	display:inline-block;
   cursor: auto;
 }
-.sidebar-node a:link,a:visited {             
+.right-sidebar a:link,a:visited {             
   color: #006BB8;                
 }   
 .node-nav {
