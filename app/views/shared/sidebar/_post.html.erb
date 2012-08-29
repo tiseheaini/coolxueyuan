@@ -1,7 +1,9 @@
 <div class="sidebar-post">
 	  <div class="sidebar-top"></div>
 	      <div class="sidebar-cent">
-            <%= link_to "发帖", new_topic_path(:node => @node.id) %>
+				    <div class="link-post">
+                <span><%= link_to "发帖", new_topic_path(:node => @node.id) %></span>
+            </div>
 				</div>
 	  <div class="sidebar-bottom"></div>
 </div>
