@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20120829035755) do
     t.string   "qq"
     t.string   "node_id",       :null => false
     t.string   "schooldate"
-    t.string   "photo"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "photo"
   end
 
 end
