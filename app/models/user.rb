@@ -2,8 +2,9 @@
 class User < ActiveRecord::Base
   has_many :topics
 	belongs_to :node
+	mount_uploader :photo, PhotoUploader
 
-  attr_accessible :node_id, :gender, :nickname, :password_hash, :password_salt, :qq, :schooldate, :username, :password, :password_confirmation
+  attr_accessible :photo, :node_id, :gender, :nickname, :password_hash, :password_salt, :qq, :schooldate, :username, :password, :password_confirmation
 
   attr_accessor :password_confirmation
 
