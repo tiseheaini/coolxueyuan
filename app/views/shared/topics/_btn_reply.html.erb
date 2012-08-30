@@ -1,7 +1,10 @@
 <div class="left-content-top"></div>
     <div class="left-content-cent">
 		    <div class="btn-reply">
-				
+				    <%= form_for @reply_new, :as => :reply, :url => replies_create_path(:topic_id => @topic) do |f| %>
+						  <%= f.text_area :text %>
+							<%= f.submit %>
+						<% end %>
 				</div>
 		</div>
 <div class="left-content-bottom"></div>

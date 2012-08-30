@@ -52,7 +52,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
       %w(jpg jpeg gif png)
     end
 		def default_url
-		  "rails.png"
+		  "rails.jpg"
 		end
 					
 

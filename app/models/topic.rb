@@ -2,6 +2,7 @@
 class Topic < ActiveRecord::Base
   belongs_to :user
 	belongs_to :node, :counter_cache => true
+	has_many :replies
 
   attr_accessible :node_id, :text, :title, :user_id
 

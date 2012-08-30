@@ -1,5 +1,9 @@
 Coolxueyuan::Application.routes.draw do
 
+  get "replies/new"
+
+  post "replies/create"
+
   match "school/node:id" => "school#node", :as => :node_school
 
   resources :topics, :except => :index do

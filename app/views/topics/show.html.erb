@@ -8,7 +8,9 @@
 <div class="wrap-left">
     <div class="left-content">
         <%= render :partial => 'shared/topics/article' %>
-				<%= render :partial => 'shared/topics/reply' %>
+				  <% if !@reply.blank? %>
+				    <%= render :partial => 'shared/topics/reply' %>
+				  <% end %>
 				<%= render :partial => 'shared/topics/btn_reply' %>
 
     </div>

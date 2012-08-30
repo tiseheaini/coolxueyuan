@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120829035755) do
+ActiveRecord::Schema.define(:version => 20120821050249) do
 
   create_table "nodes", :force => true do |t|
     t.string   "name",                        :null => false
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(:version => 20120829035755) do
     t.string   "nickname"
     t.string   "password_hash", :null => false
     t.string   "password_salt", :null => false
+    t.string   "photo"
     t.boolean  "gender"
     t.string   "qq"
-    t.string   "node_id",       :null => false
+    t.integer  "node_id",       :null => false
     t.string   "schooldate"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
-    t.string   "photo"
   end
 
 end

@@ -19,9 +19,34 @@
   Topic.delete_all
 
   30.times do |t|
-  Topic.create(:user_id => '1', :node_id => '2', :title => "主题#{t}", 
+  Topic.create(:user_id => '1', :node_id => '1', :title => "1.主题#{t}", 
                :text => "#{t}.以前上学的时候就听的就不是很明白，许多书里也讲的似是而非，
                               在后来编程的时候又遇到很多名词像addListener，bind，槽，回调，事件，
                               消息等等似乎都跟“中断”这个词有关。所以也上网看过许多帖子的解释，
                               过程虽然很清晰明了，但是总觉得还是哪里隔着一层膜，让人那么的不舒服。")
   end
+
+  30.times do |t|
+  Topic.create(:user_id => '2', :node_id => '2', :title => "2.主题#{t}", 
+               :text => "#{t}.以前上学的时候就听的就不是很明白，许多书里也讲的似是而非，
+                              在后来编程的时候又遇到很多名词像addListener，bind，槽，回调，事件，
+                              消息等等似乎都跟“中断”这个词有关。所以也上网看过许多帖子的解释，
+                              过程虽然很清晰明了，但是总觉得还是哪里隔着一层膜，让人那么的不舒服。")
+  end
+
+	User.delete_all
+
+  User.create(:username => '12345', 
+	            :nickname => 'nickname', 
+							:password => '123456', 
+							:gender => '0', 
+							:qq => '84458686', 
+							:node_id => '1', 
+							:schooldate => '2012-08-27 10:34:13')
+  User.create(:username => '123456', 
+	            :nickname => 'nickname2', 
+							:password => '123456', 
+							:gender => '0', 
+							:qq => '844583685', 
+							:node_id => '2', 
+							:schooldate => '2012-08-27 10:34:50')

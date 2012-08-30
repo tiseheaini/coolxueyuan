@@ -50,3 +50,31 @@ a:link,a:visited {
   color: black;                
   text-decoration: none;       
 }   
+/* topics  show */
+.left-content-top {
+  margin-top: 10px;
+}
+.text-title {
+  height: 64px;
+	padding-left: 20px;
+	padding-top: 3px;
+}
+.user-photo {
+  width: 64px;
+	height: 64px;
+	float:left;
+}
+.title {
+  font-size: 22px;
+  margin-left: 72px;
+	margin-top: 5px;
+}
+.line {
+	width: 100%;
+  margin: 6px 0px;
+}
+.text-text {
+  padding-left: 21px;
+	padding-top: 6px;
+	padding-right: 15px;
+}

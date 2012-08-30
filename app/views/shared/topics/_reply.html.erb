@@ -1,7 +1,11 @@
 <div class="left-content-top"></div>
     <div class="left-content-cent">
 		    <div class="reply">
-				
+				    <% if !@reply.blank? %>
+				      <% @reply.each do |reply| %>
+							  <span><%= reply.text %><br /></span>
+							<% end %>
+						<% end %>
 				</div>
 		</div>
 <div class="left-content-bottom"></div>
