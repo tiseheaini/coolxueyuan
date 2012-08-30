@@ -35,23 +35,15 @@
         <%= render :partial => "shared/sidebar/post" %>
 
         <div class="sidebar-login">
-           	<div class="sidebar-top"></div>
-           	    <div class="sidebar-cent">
-								    <% if current_user %>
-										  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
-									  <% else %>
-                      <%= render :partial => "shared/sidebar/form_login" %>
-									  <% end %>
-                </div>
-          	<div class="sidebar-bottom"></div>
+						<% if current_user %>
+						    <%= render :partial => "shared/sidebar/user_info", :object => @user %>
+					  <% else %>
+                <%= render :partial => "shared/sidebar/form_login" %>
+					  <% end %>
         </div>
 
 				<div class="sidebar-node">
-					  <div class="sidebar-top"></div>
-					      <div class="sidebar-cent">
-								  <%= render :partial => "shared/sidebar/node_nav" %>
-						    </div>
-					  <div class="sidebar-bottom"></div>
+				    <%= render :partial => "shared/sidebar/node_nav" %>
 				</div>
           
     </div>  

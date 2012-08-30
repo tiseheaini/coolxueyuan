@@ -1,13 +1,17 @@
-<div class="mess-frame">
-    <span>登录</span>
-</div>
-<div class="form-line"></div>
-<%= form_tag home_login_path do -%>
-  <label for="login" class="form-label" >帐号</label>
-	  <%= text_field_tag :login, params[:login] %><br />
-  <label for="password" class="form-label" >密码</label>
-	  <%= password_field_tag :password, params[:password] %><br />
+<div class="sidebar-top"></div>
+    <div class="sidebar-cent">
+        <div class="mess-frame">
+            <span>登录</span>
+        </div>
+        <div class="form-line"></div>
+            <%= form_tag home_login_path do -%>
+              <label for="login" class="form-label" >帐号</label>
+	              <%= text_field_tag :login, params[:login] %><br />
+              <label for="password" class="form-label" >密码</label>
+	              <%= password_field_tag :password, params[:password] %><br />
 		
-		<%= link_to "注册", new_user_path, :target => "_blank", :class => "form-sign" %>
-	  <%= submit_tag "登录", :class => "form-submit" %>
-<% end %>
+		            <%= link_to "注册", new_user_path, :target => "_blank", :class => "form-sign" %>
+	              <%= submit_tag "登录", :class => "form-submit" %>
+            <% end %>
+    </div>
+<div class="sidebar-bottom"></div>
