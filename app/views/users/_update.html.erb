@@ -1,0 +1,51 @@
+<div class="mess-frame">
+	  <span>修改个人信息</span>
+</div>
+<div class="form-line"></div>
+<%= form_for @user,:html => {:multipart => true} do |f| %>
+    <div class="error-mess-box">
+		  <% @user.errors.each do |attr,msg| %>
+        <div class="error-list"><%= msg %></div><br />
+      <% end %>
+		</div>
+
+		<div class="field">
+		    <div class="user-label"><%= f.label :nickname, "昵称：" %></div>
+          <%= f.text_field :nickname, :class => "user-input" %>
+		    </div>
+		<div class="field">
+			  <div class="user-label"><%= f.label :photo, "头像：" %></div>
+          <%= f.file_field :photo, :class => "user-input" %>
+		</div>
+	  <div class="field">
+	  	  <div class="user-label"><%= f.label :gender, "性别：" %></div>
+				<div class="user-radio">
+          <%= f.radio_button :gender,0 %>
+          <%= f.label :男 %>
+          <%= f.radio_button :gender,1 %>
+          <%= f.label :女 %>
+		    </div>
+		</div>
+		<div class="field">
+	      <div class="user-label"><%= f.label :qq, "QQ：" %></div>
+          <%= f.text_field :qq, :class => "user-input" %>
+		    </div>
+		<div class="field">
+	      <div class="user-label"><%= f.label :node_id, "院系：" %></div>
+		      <%= f.select :node_id, select_array %>
+		    </div>
+		<div class="field">
+	      <div class="user-label"><%= f.label :schooldate, "入学时间：" %></div>
+          <%= f.select :schooldate, (1997..2012), :class => "user-input" %>
+		    </div>
+		<div class="field">
+			  <div class="user-label"></div>
+		</div>
+		<div class="field">
+			  <div class="user-label"></div>
+		</div>
+    <div class="actions">
+      <%= f.submit "更改", :class => "user-submit" %>
+    </div>
+
+<% end %>

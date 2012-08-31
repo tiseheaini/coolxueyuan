@@ -6,7 +6,9 @@
         <div class="form-line"></div>
 
         <div class="user-info">
-            <div id="user-face"></div>
+            <div id="user-face">
+						    <%= link_to image_tag(current_user.photo_url(:thumb)), edit_user_path(@user)%>
+						</div>
                 <div id="user-mess">
 		                <span><%= @user.nickname %></span><br />
 		                <span>你有N条消息</span><br />

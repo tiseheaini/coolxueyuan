@@ -38,17 +38,21 @@ ActiveRecord::Schema.define(:version => 20120821050249) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",      :null => false
+    t.string   "username",                         :null => false
     t.string   "nickname"
-    t.string   "password_hash", :null => false
-    t.string   "password_salt", :null => false
+    t.string   "password_hash",                    :null => false
+    t.string   "password_salt",                    :null => false
+    t.string   "state"
+    t.string   "city"
     t.string   "photo"
     t.boolean  "gender"
     t.string   "qq"
-    t.integer  "node_id",       :null => false
+    t.integer  "node_id",                          :null => false
     t.string   "schooldate"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.boolean  "monitor",       :default => false
+    t.boolean  "admin",         :default => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
 end

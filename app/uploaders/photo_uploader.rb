@@ -1,9 +1,8 @@
 # encoding: utf-8
-
+require 'carrierwave/processing/mini_magick'
 class PhotoUploader < CarrierWave::Uploader::Base
-
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -17,7 +16,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "/upload/photo"
+	  'public/upload/'
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -39,6 +38,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process :scale => [50, 50]
   # end
+	process :resize_to_limit => [64, 64]
+
 	version :thumb do
 	  process :resize_to_limit => [64, 64]
 	end

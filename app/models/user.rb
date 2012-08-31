@@ -1,7 +1,7 @@
 # encoding: utf-8
 class User < ActiveRecord::Base
   has_many :topics
-	has_many :teplies
+	has_many :replies
 	belongs_to :node
 	mount_uploader :photo, PhotoUploader
 
