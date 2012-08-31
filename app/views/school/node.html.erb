@@ -15,7 +15,7 @@
 				    <% @topic.each do |topic| %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face"><%= image_tag current_user.photo_url %></div>
+                        <div class="list-face"><%= image_tag current_user.photo_url(:thumb) %></div>
                             <div class="list-content">
 												        <%= link_to topic.title, topic_path(topic) %><br />
 																<%= topic.text %>
