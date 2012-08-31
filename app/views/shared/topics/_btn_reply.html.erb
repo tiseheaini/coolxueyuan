@@ -1,10 +1,15 @@
-<div class="left-content-top"></div>
-    <div class="left-content-cent">
-		    <div class="btn-reply">
-				    <%= form_for @reply_new, :as => :reply, :url => replies_create_path(:topic_id => @topic) do |f| %>
-						  <%= f.text_area :text %>
-							<%= f.submit %>
-						<% end %>
-				</div>
-		</div>
-<div class="left-content-bottom"></div>
+<div class="btn-reply">
+    <div class="left-content-top"></div>
+        <div class="left-content-cent">
+		        <div class="reply-mess">
+				      <span>说他两句</span>
+				    </div>
+		        <div class="btn-reply">
+				        <%= form_for @reply_new, :as => :reply, :url => replies_create_path(:topic_id => @topic) do |f| %>
+						      <%= f.text_area :text %>
+							    <%= f.submit "评论", :class => "reply-submit" %>
+				    		<% end %>
+		    		</div>
+	    	</div>
+    <div class="left-content-bottom"></div>
+</div>

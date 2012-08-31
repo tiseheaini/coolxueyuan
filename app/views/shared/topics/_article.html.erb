@@ -1,12 +1,14 @@
-<div class="left-content-top"></div>
-    <div class="left-content-cent">
-		    <div class="text-title">
-				    <div class="user-photo"><%= image_tag(current_user.photo_url(:thumb)) %></div>
-						<div class="title"><%= truncate(@topic.title, :length => 100) %></div>
-				</div>
-		    <div class="line"></div>
-		    <div class="text-text">
-				    <%= @topic.text %>
-		    </div>
-    </div>
-<div class="left-content-bottom"></div>
+<div class="article">
+    <div class="left-content-top"></div>
+        <div class="left-content-cent">
+		        <div class="text-title">
+				        <div class="user-photo"><%= image_tag(current_user.photo_url(:thumb)) %></div>
+						    <div class="title"><%= truncate(@topic.title, :length => 100) %></div>
+	    		    	</div>
+		        <div class="line"></div>
+		        <div class="text-text">
+				        <%= @topic.text %>
+	    	    </div>
+        </div>
+    <div class="left-content-bottom"></div>
+</div>

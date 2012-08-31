@@ -11,7 +11,7 @@ Coolxueyuan::Application.routes.draw do
 	end
 
   resources :login, :only => [:new, :create]
-  resources :users, :only => [:new, :create]
+  resources :users
 
 	get  "home/signout"
   get  "home/index"
