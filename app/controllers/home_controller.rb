@@ -1,7 +1,7 @@
 # encoding: utf-8
 class HomeController < ApplicationController
   def index
-	  @topic = Topic.order("created_at DESC").limit(5)
+	  @topics = Topic.order("created_at DESC").limit(5)
   end
   
 	def login

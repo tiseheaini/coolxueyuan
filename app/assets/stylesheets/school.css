@@ -6,3 +6,14 @@
   padding-left: 119px;
 	height: 20px;
 }
+.user-name {
+  display:inline-block;
+}
+.user-node {
+  display:inline-block;
+	padding-left: 2px;
+}
+.topic-text {
+  margin-top: 3px;
+	margin-left: 2px;
+}

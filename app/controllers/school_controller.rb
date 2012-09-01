@@ -6,6 +6,6 @@ class SchoolController < ApplicationController
 	# GET /topics/node:id
   def node
 	  @node = Node.find(params[:id])
-		@topic = @node.topics
+		@topics = @node.topics
 	end
 end

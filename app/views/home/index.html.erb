@@ -10,13 +10,16 @@
         <div class="left-content-top"></div>
         
         <div class="left-content-cent">
-				    <% @topic.each do |topic| %>
+				    <% @topics.each do |topic| %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face"><%= topic.title %></div>
+                        <div class="list-face"><%= link_to image_tag(topic.user.photo_url(:thumb)), user_path(topic.user_id) %></div>
                             <div class="list-content">
-												        <%= topic.title %><br />
-																<%= topic.text %>
+														    <div class="user-title">
+														    	 <div class="user-name"><%= link_to topic.title, topic_path(topic), :target => '_blank' %></div>
+														    	 <div class="user-node">来自<%= topic.node.name %>的同学发言</div>
+														    </div>
+																<div class="topic-text"><%= topic.text %></div>
 												    </div>
                 </div>
 					  </div>
