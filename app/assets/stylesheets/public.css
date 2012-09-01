@@ -200,6 +200,7 @@
 }
 .right-sidebar a:link,a:visited {             
   color: #006BB8;                
+  text-decoration: none;       
 }   
 .node-nav {
 	padding-top: 5px;

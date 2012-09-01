@@ -51,9 +51,6 @@
   padding-top: 7px;            
   padding-left: 17px;          
 }   
-a:link,a:visited {             
-  text-decoration: none;       
-}   
 /* topics  show */
 /* topics  show */
 /* topics  show */
@@ -63,9 +60,6 @@ a:link,a:visited {
 }
 .article {
   margin-bottom: 26px;
-}
-.reply-content a:link,a:visited {
-  color: #333;
 }
 .text-title {
   height: 64px;
