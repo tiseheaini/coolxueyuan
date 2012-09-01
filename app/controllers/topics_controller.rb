@@ -1,5 +1,7 @@
 # encoding: utf-8
 class TopicsController < ApplicationController
+  before_filter :validate_session, :except => [:show]
+
   # GET /topics/1
   # GET /topics/1.json
   def show
@@ -71,4 +73,12 @@ class TopicsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	private
+	  def validate_session
+		  unless session[:user_id]
+			  flash[:notice] = "你还没有登录"
+			  redirect_to new_login_path
+			end
+		end
 end
