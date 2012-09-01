@@ -12,6 +12,11 @@
 	margin-top: 5px;
 	margin-left: 33px;
 }
+.flash {
+   min-height: 19px;
+	 padding-left: 21px;
+	 color: red;
+}
 #topic_text {
   width: 489px;
 	margin-left: 33px;

@@ -1,4 +1,7 @@
+# encoding: utf-8
 class RepliesController < ApplicationController
+  before_filter :validate_action
+
   def new
   end
 
@@ -13,4 +16,12 @@ class RepliesController < ApplicationController
 		  redirect_to home_index_path
 		end
   end
+
+	private
+	  def validate_action
+		  unless session[:user_id]
+			  flash[:notice] = "不能评论"
+			  redirect_to :back
+			end
+		end
 end

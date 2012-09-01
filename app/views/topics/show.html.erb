@@ -7,6 +7,9 @@
 </div>
 <div class="wrap-left">
     <div class="left-content">
+        <% if flash[:notice] %>
+          <%= render :partial => 'shared/topics/flash' %>
+        <% end %>
         <%= render :partial => 'shared/topics/article' %>
 				  <% if !@reply.blank? %>
 				    <%= render :partial => 'shared/topics/reply' %>
