@@ -1,5 +1,7 @@
 # encoding: utf-8
 class UsersController < ApplicationController
+  before_filter :validate_session, :except => [:show, :new, :create]
+
   # GET /users
   # GET /users.json
   def index
@@ -78,4 +80,12 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	private
+	  def validate_session
+		  unless session[:user_id]
+			  flash[:notice] = "你还没有登录"
+			  redirect_to new_login_path
+			end
+		end
 end
