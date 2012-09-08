@@ -7,6 +7,14 @@
 </div>
 <div class="wrap-left">
     	<div class="left-content">
+          <div class="send-mess">
+          	<div class="left-content-top"></div>
+          	<div class="left-content-cent send-mess-cont">
+						    <span>信息将会发送给  <%= link_to @receive_name, user_path(params[:receive_id]) %></span>
+						</div>
+          	<div class="left-content-bottom"></div>
+          </div>
+
     		<div class="left-content-top"></div>
     		<div class="left-content-cent">
             <%= render 'form' %>

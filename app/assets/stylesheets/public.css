@@ -95,6 +95,10 @@
 	margin-left: 30px;
 	margin-bottom: 6px;
 }
+.mail-sub {
+  position:relative; 
+	top: 10px;
+}
 
 .wrap-right{
   float: right;

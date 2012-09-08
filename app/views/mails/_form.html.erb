@@ -1,0 +1,10 @@
+<%= form_for(@mail) do |f| %>
+
+  <div class="field">
+    <%= f.label "发送内容", :class => "mail-label" %><br />
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit "发送", :class => "mail_submit" %>
+  </div>
+<% end %>

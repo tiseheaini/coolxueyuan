@@ -1,0 +1,31 @@
+<h1>Listing mails</h1>
+
+<table>
+  <tr>
+    <th>Senduser</th>
+    <th>Receiveuser</th>
+    <th>Text</th>
+    <th>Senduser delete</th>
+    <th>Receiveuser delete</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mails.each do |mail| %>
+  <tr>
+    <td><%= mail.senduser %></td>
+    <td><%= mail.receiveuser %></td>
+    <td><%= mail.text %></td>
+    <td><%= mail.senduser_delete %></td>
+    <td><%= mail.receiveuser_delete %></td>
+    <td><%= link_to 'Show', mail %></td>
+    <td><%= link_to 'Edit', edit_mail_path(mail) %></td>
+    <td><%= link_to 'Destroy', mail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mail', new_mail_path %>
