@@ -1,7 +1,5 @@
 # encoding: utf-8
 class MailsController < ApplicationController
-  before_filter :validate_session
-
   # GET /mails
   # GET /mails.json
   def index
@@ -56,12 +54,4 @@ class MailsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-	private
-	  def validate_session
-		  unless session[:user_id]
-			  flash[:notice] = "你还没有登录"
-			  redirect_to new_login_path
-			end
-		end
 end

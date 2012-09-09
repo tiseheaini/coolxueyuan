@@ -1,5 +1,6 @@
 # encoding: utf-8
 class RepliesController < ApplicationController
+  skip_before_filter :validate_session
   before_filter :validate_action
 
   def new

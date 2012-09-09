@@ -1,8 +1,5 @@
 class SchoolController < ApplicationController
-  def index
-	  @school = Topic.all
-  end
-
+  skip_before_filter :validate_session
 	# GET /topics/node:id
   def node
 	  @node = Node.find(params[:id])

@@ -1,5 +1,7 @@
 # encoding: utf-8
 class LoginController < ApplicationController
+  skip_before_filter :validate_session
+
   def new
 	  @user = User.new
   end

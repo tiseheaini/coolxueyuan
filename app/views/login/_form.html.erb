@@ -10,7 +10,7 @@
   <label for="password" class="form-label">密码：</label>
 	  <%= password_field_tag :password, params[:password] %><br />
 			  
-		<%= link_to "注册", new_login_path, :target => "_blank", :class => "form-sign" %>
+		<%= link_to "注册", new_user_path, :target => "_blank", :class => "form-sign" %>
 	  <%= submit_tag "登录", :class => "form-submit" %>
 <% end %>
 </div>
