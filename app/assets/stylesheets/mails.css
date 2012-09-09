@@ -22,3 +22,25 @@
 	margin-top: 11px;
 	margin-bottom: 10px;
 }
+.mail-content {
+  min-height: 48px;
+}
+.mail-list-face {
+  float:left;
+}
+.mails-list {
+  overflow:hidden;
+}
+.list-single {
+  padding-left: 18px;
+}
+.mail-text {
+  padding-top: 3px;
+}
+.mail-text-title {
+  font-size: 13px;
+}
+.mail-line {
+  width: 100%;
+	margin-left: 0px;
+}

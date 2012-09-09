@@ -5,7 +5,7 @@ class MailsController < ApplicationController
   # GET /mails
   # GET /mails.json
   def index
-    @mails = Mail.find_all_by_receiveuser(:id)
+    @mails = Mail.find_all_by_receiveuser(session[:user_id])
 
     respond_to do |format|
       format.html # index.html.erb
