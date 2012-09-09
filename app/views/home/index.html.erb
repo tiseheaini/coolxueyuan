@@ -14,12 +14,12 @@
             <div class="feed-list">
 	              <div class="list-single">
                         <div class="list-face"><%= link_to image_tag(topic.user.photo_url(:thumb)), user_path(topic.user_id) %>
-												    <%= link_to "发送消息", new_mail_path(:receive_id => topic.user), :class => "mail-sub" %>
+												    <%= link_to "悄悄话", new_mail_path(:receive_id => topic.user), :class => "mail-sub" %>
 												</div>
                             <div class="list-content">
 														    <div class="user-title">
 														    	 <div class="user-name"><%= link_to topic.title, topic_path(topic), :target => '_blank' %></div>
-														    	 <div class="user-node">来自<%= topic.node.name %>的同学发言</div>
+														    	 <div class="user-node">来自<%= topic.node.name %>的社区发言</div>
 														    </div>
 																<div class="topic-text"><%= topic.text %></div>
 												    </div>

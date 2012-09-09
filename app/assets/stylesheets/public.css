@@ -72,11 +72,11 @@
 }
 .list-single {
   width: 620px;
+	margin-bottom: 7px;
 }
 .list-face {
   width: 64px;
   height: 64px;
-  background-color: black;
   position:relative;
   top: 16px;
   left: 21px;
@@ -97,7 +97,8 @@
 }
 .mail-sub {
   position:relative; 
-	top: 10px;
+	top: 5px;
+	left: 7px;
 }
 
 .wrap-right{
@@ -177,7 +178,6 @@
 	height: 64px;
 	margin-left: 13px;
 	float: left;
-	background-color: black;
 }
 #user-mess {
   width: 187px;

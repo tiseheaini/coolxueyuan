@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908041026) do
+ActiveRecord::Schema.define(:version => 20120909090047) do
 
   create_table "mails", :force => true do |t|
     t.integer  "senduser",                              :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120908041026) do
     t.boolean  "receiveuser_delete", :default => false
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+    t.boolean  "read",               :default => false
   end
 
   create_table "nodes", :force => true do |t|

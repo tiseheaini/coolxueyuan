@@ -6,7 +6,7 @@
 				        <% if !@reply.blank? %>
 				          <% @reply.each do |reply| %>
 								      <div class="reply-list">
-									        <div class="reply-photo"><%= link_to(image_tag(reply.user.photo_url),
+									        <div class="reply-photo"><%= link_to(image_tag(reply.user.photo_url(:small)),
 										                                             user_path(reply.user.id)) %></div>
 											    <div class="text-content">
 									            <div class="name" >
