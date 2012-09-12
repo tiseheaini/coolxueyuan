@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909090047) do
+ActiveRecord::Schema.define(:version => 20120912111645) do
+
+  create_table "forgetpasswords", :force => true do |t|
+    t.string   "user",                 :null => false
+    t.string   "password_forget_hash", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
 
   create_table "mails", :force => true do |t|
     t.integer  "senduser",                              :null => false
