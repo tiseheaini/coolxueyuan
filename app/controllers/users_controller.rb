@@ -92,6 +92,7 @@ class UsersController < ApplicationController
 	    @forget.password_forget_hash = Digest::SHA256.hexdigest(Array.new(30){rand(1024).to_s(36)}.join)
 
 		  if @forget.save
+			  Usermail.forget_password(params[:forget][:user_name],params[:forget][:user_qq]).deliver
 		    flash[:user_mail] = params[:forget][:user_qq]
 			  render :action => "forget_password"
 		  else

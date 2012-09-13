@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'therubyracer'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'mail','2.4.4'
 
 
 # Gems used only for assets and not required
