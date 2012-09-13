@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(:version => 20120912111645) do
 
   create_table "forgetpasswords", :force => true do |t|
-    t.string   "user",                 :null => false
+    t.string   "user_name",            :null => false
+    t.string   "user_qq",              :null => false
     t.string   "password_forget_hash", :null => false
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false

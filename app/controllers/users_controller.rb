@@ -1,6 +1,6 @@
 # encoding: utf-8
 class UsersController < ApplicationController
-  skip_before_filter :validate_session, :only => [:show, :new, :create]
+  skip_before_filter :validate_session, :only => [:new, :create, :forget_password, :forget_password_create]
 
   # GET /users
   # GET /users.json
@@ -79,5 +79,27 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+  
+	def forget_password
+	  @forget = Forgetpassword.new
+	end
+
+  def forget_password_create
+	  if User.find_by_username_and_qq(params[:forget][:user_name],params[:forget][:user_qq])
+  	  @forget = Forgetpassword.find_by_user_name(params[:forget][:user_name]) || Forgetpassword.new(:user_name => "#{params[:forget][:user_name]}")
+			@forget.user_qq              = params[:forget][:user_qq]
+	    @forget.password_forget_hash = Digest::SHA256.hexdigest(Array.new(30){rand(1024).to_s(36)}.join)
+
+		  if @forget.save
+		    flash[:user_mail] = params[:forget][:user_qq]
+			  render :action => "forget_password"
+		  else
+        render :status => 404
+		  end
+		else
+		  flash[:error] = "你给出的帐号和你在注册时的QQ不配对，无法给您发出邮件"
+			render :action => "forget_password"
+	  end
   end
 end
