@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915044735) do
+ActiveRecord::Schema.define(:version => 20120915111217) do
 
   create_table "forgetpasswords", :force => true do |t|
-    t.string   "user_name",            :null => false
-    t.string   "user_qq",              :null => false
-    t.string   "password_forget_hash", :null => false
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.string   "user_name",                              :null => false
+    t.string   "user_qq",                                :null => false
+    t.string   "password_forget_hash",                   :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.boolean  "read",                 :default => true
   end
 
   create_table "messages", :force => true do |t|

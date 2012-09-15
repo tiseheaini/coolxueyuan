@@ -1,7 +1,7 @@
 # encoding: utf-8
 class UsersController < ApplicationController
   skip_before_filter :validate_session, :only => [:new, :create, :forget_password, :forget_password_create, :forget_password_change, :forget_password_to_change]
-	before_filter      :forget_password_change_validate, :only => :forget_password_change
+	before_filter      :forget_password_change_validate, :only => [:forget_password_change, :forget_password_to_change]
 
   # GET /users
   # GET /users.json
@@ -91,6 +91,7 @@ class UsersController < ApplicationController
   	  @forget = Forgetpassword.find_by_user_name(params[:forget][:user_name]) || Forgetpassword.new(:user_name => "#{params[:forget][:user_name]}")
 			@forget.user_qq              = params[:forget][:user_qq]
 	    @forget.password_forget_hash = Digest::SHA256.hexdigest(Array.new(30){rand(1024).to_s(36)}.join)
+			@forget.read = true
 
 		  if @forget.save
 			  Usermail.forget_password(params[:forget][:user_name],params[:forget][:user_qq]).deliver
@@ -106,12 +107,12 @@ class UsersController < ApplicationController
   end
 
 	def forget_password_change
-		
+
 	end
 
 	def forget_password_to_change
 		@user = User.find_by_username(params[:user_name])
-		if @user.update_attributes(params[:change])
+		if @user.update_attributes(params[:change]) && Forgetpassword.find_by_user_name(params[:user_name]).update_attributes(:read => false)
 			redirect_to home_index_path
 	  else
 		  redirect_to users_forget_password_change_path
@@ -121,9 +122,9 @@ class UsersController < ApplicationController
 	private
 
 	  def forget_password_change_validate
-		  @validate = Forgetpassword.find_by_user_name_and_password_forget_hash(params[:user_name],params[:user_hash])
+		  @validate = Forgetpassword.find_by_user_name_and_read(params[:user_name], true)
 	  	unless @validate
-	  		redirect_to home_index_path
+	  		render :status => 500
 	  	end
 	  end
 end
