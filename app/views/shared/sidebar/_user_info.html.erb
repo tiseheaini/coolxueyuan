@@ -11,7 +11,9 @@
 						</div>
                 <div id="user-mess">
 		                <span><%= @user.nickname %></span><br />
+										<% if mail_mess_count.blank? %>
 		                <span>你有<%= link_to mail_mess_count, mails_path %>条消息  <%= link_to "查看", mails_path %></span><br />
+										<% end %>
 				            <span>进入我的社区<%= link_to "#{@user.node.name}", node_school_path(@user.node_id, :node_name => @user.node.name) %></span>
 		            </div>
 		        <div id="sub-sign-out">

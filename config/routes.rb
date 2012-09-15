@@ -12,6 +12,8 @@ Coolxueyuan::Application.routes.draw do
     resources :replies
 	end
 
+  put  "users/forget_password_to_change"
+  get  "users/forget_password_change"
 	post "users/forget_password_create"
 	get "users/forget_password"
   resources :login, :only => [:new, :create]

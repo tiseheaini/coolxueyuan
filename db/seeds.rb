@@ -20,6 +20,6 @@
 	            :nickname => 'nickname2', 
 							:password => '123456', 
 							:gender => '0', 
-							:qq => '844583685', 
+							:qq => '844583686', 
 							:node_id => '2', 
 							:schooldate => '2012-08-27 10:34:50')

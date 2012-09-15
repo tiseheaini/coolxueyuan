@@ -1,6 +1,7 @@
 # encoding: utf-8
 class UsersController < ApplicationController
-  skip_before_filter :validate_session, :only => [:new, :create, :forget_password, :forget_password_create]
+  skip_before_filter :validate_session, :only => [:new, :create, :forget_password, :forget_password_create, :forget_password_change, :forget_password_to_change]
+	before_filter      :forget_password_change_validate, :only => :forget_password_change
 
   # GET /users
   # GET /users.json
@@ -103,4 +104,26 @@ class UsersController < ApplicationController
 			render :action => "forget_password"
 	  end
   end
+
+	def forget_password_change
+		
+	end
+
+	def forget_password_to_change
+		@user = User.find_by_username(params[:user_name])
+		if @user.update_attributes(params[:change])
+			redirect_to home_index_path
+	  else
+		  redirect_to users_forget_password_change_path
+		end
+	end
+	
+	private
+
+	  def forget_password_change_validate
+		  @validate = Forgetpassword.find_by_user_name_and_password_forget_hash(params[:user_name],params[:user_hash])
+	  	unless @validate
+	  		redirect_to home_index_path
+	  	end
+	  end
 end
