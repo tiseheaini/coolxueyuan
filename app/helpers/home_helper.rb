@@ -4,6 +4,6 @@ module HomeHelper
 	end
 
 	def mail_mess_count
-	  @mail_mess_count = Mail.find_all_by_receiveuser_and_read(session[:user_id], false).count
+	  @mail_mess_count = Message.find_all_by_receiveuser_and_read(session[:user_id], false).count
 	end
 end

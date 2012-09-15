@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912111645) do
+ActiveRecord::Schema.define(:version => 20120915044735) do
 
   create_table "forgetpasswords", :force => true do |t|
     t.string   "user_name",            :null => false
@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(:version => 20120912111645) do
     t.datetime "updated_at",           :null => false
   end
 
-  create_table "mails", :force => true do |t|
+  create_table "messages", :force => true do |t|
     t.integer  "senduser",                              :null => false
     t.integer  "receiveuser",                           :null => false
     t.text     "text"
     t.boolean  "senduser_delete",    :default => false
     t.boolean  "receiveuser_delete", :default => false
+    t.boolean  "read",               :default => false
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
-    t.boolean  "read",               :default => false
   end
 
   create_table "nodes", :force => true do |t|
