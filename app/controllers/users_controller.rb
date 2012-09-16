@@ -124,7 +124,7 @@ class UsersController < ApplicationController
 	  def forget_password_change_validate
 		  @validate = Forgetpassword.find_by_user_name_and_read(params[:user_name], true)
 	  	unless @validate
-	  		render :status => 500
+			  redirect_to users_forget_password_create_path
 	  	end
 	  end
 end

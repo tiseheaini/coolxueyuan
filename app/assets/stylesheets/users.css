@@ -54,3 +54,51 @@ form {
 	height: 28px;
 	margin-left: 298px;
 }
+/** forget_password **/
+
+.left-content-cent {
+  padding-top: 9px;
+	padding-left: 20px;
+}
+.flash {
+  margin-top: 9px;
+	margin-bottom: 9px;
+	display: block;
+  color: red;
+}
+.forget-label {
+  float:left;
+  width: 52px;
+	padding-top: 3px;
+	text-align: right;
+}
+.forget-input {
+  height: 21px;
+}
+.forget-submit {
+  width: 60px;
+	height: 30px;
+	margin-left: 246px;
+}
+.forget-title {
+  padding-top: 18px;
+}
+.forget-to-change {
+  
+}
+.new_change label {
+  width: 90px;
+	display: block;
+	float:left;
+	margin-top: 17px;
+}
+#change_password,#change_password_confirmation {
+  height: 21px;
+	margin-top: 17px;
+}
+.new_change_submit {
+	width: 60px;
+  height: 30px;
+	margin-left: 282px;
+	margin-top: 17px;
+}
