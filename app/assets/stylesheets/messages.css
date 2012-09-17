@@ -1,0 +1,46 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.send-mess-cont {
+  min-height: 10px;
+	padding-left: 30px;
+}
+.message-label {
+  padding-left: 31px;
+}
+#message_text {
+  width: 500px;
+	height: 158px;
+	margin-left: 33px;
+	margin-top: 13px;
+}
+.message_submit {
+  width: 60px;
+	height: 30px;
+	margin-left: 475px;
+	margin-top: 11px;
+	margin-bottom: 10px;
+}
+.message-content {
+  min-height: 48px;
+}
+.message-list-face {
+  float:left;
+}
+.messages-list {
+  overflow:hidden;
+}
+.list-single {
+  padding-left: 18px;
+}
+.message-text {
+  padding-top: 3px;
+}
+.message-text-title {
+  font-size: 13px;
+}
+.message-line {
+  width: 100%;
+	margin-left: 0px;
+}

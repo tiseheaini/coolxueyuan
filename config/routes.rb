@@ -1,6 +1,6 @@
 Coolxueyuan::Application.routes.draw do
 
-  resources :mails, :only => [:index, :new, :create, :destroy]
+  resources :messages, :only => [:index, :new, :create, :destroy]
 
   get "replies/new"
 

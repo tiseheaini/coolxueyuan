@@ -1,0 +1,10 @@
+<%= form_for(@message) do |f| %>
+
+  <div class="field">
+    <%= f.label "发送内容", :class => "message-label" %><br />
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit "发送", :class => "message_submit" %>
+  </div>
+<% end %>

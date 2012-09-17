@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120917084856) do
+ActiveRecord::Schema.define(:version => 20120917114447) do
 
   create_table "forgetpasswords", :force => true do |t|
     t.string   "user_name",                              :null => false

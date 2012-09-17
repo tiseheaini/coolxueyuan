@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Senduser:</b>
+  <%= @message.senduser %>
+</p>
+
+<p>
+  <b>Receiveuser:</b>
+  <%= @message.receiveuser %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @message.text %>
+</p>
+
+<p>
+  <b>Senduser delete:</b>
+  <%= @message.senduser_delete %>
+</p>
+
+<p>
+  <b>Receiveuser delete:</b>
+  <%= @message.receiveuser_delete %>
+</p>
+
+<p>
+  <b>Read:</b>
+  <%= @message.read %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
