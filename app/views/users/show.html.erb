@@ -1,0 +1,38 @@
+<div id="home-nav">
+    <div id="home-nav-top"></div>
+        <div id="home-nav-cont">
+				    <%= link_to "首页", home_index_path %>
+						<span class="dividr">></span>
+        </div>
+    <div id="home-nav-bottom"></div>
+</div>
+<div class="wrap-left">
+    	<div class="left-content">
+  	  	<div class="left-content-top"></div>
+  	    	<div class="left-content-cent">
+					    <div class="show-title">
+					    	  <div class="show-face"><%= image_tag @user.photo_url(:thumb) %></div>
+					    	  <div class="show-name"><span>昵称：</span><%= @user.nickname %></div>
+					    	  <div class="show-state"><span>院系：</span><%= @user.node.name %></div>
+					    </div>
+							<div class="show-about">
+								  <div class="about-title"><span>介绍</span></div>
+								  <div class="about-content">自我介绍<%= @user.about %></div>
+							</div>
+          </div>
+    		<div class="left-content-bottom"></div>
+				<div class="left-content-top"></div>
+				    <div class="left-content-cent show-topics-cent">
+						    <span class="show-topics-title">最近发过的帖子</span>
+								<div class="line show-topics-line"></div>
+							  <div class="show-topics">
+								    <ul>
+					              <% @topics.each do |t| %>
+												  <li><span class="show-node"><%= t.node.name %></span><%= link_to t.title, topic_path(t) %></li>
+					              <% end %>
+										</ul>
+							  </div>
+						</div>
+				<div class="left-content-bottom"></div>
+  	  </div>
+</div>

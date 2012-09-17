@@ -102,3 +102,46 @@ form {
 	margin-left: 282px;
 	margin-top: 17px;
 }
+/** show action **/
+.show-title {
+  overflow:hidden;
+}
+.show-face {
+  float:left;
+}
+.show-name,.show-state {
+  margin-left: 77px;
+}
+.show-about {
+  margin-top: 16px;
+	margin-left: 5px;
+}
+.about-content {
+  margin-top: 5px;
+}
+.show-topics-cent {
+  padding-top: 0px;
+}
+.show-node {
+  color:#444;
+	margin-right: 7px;
+}
+.show-topics-title {
+  padding-left: 4px;
+}
+.show-topics-line {
+  width: auto;
+	margin-left: -18px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+ul a:link,a:visited {
+  color:#0069D6;
+  text-decoration: none;       
+}
+ul {
+  list-style: none;
+}
+li {
+  padding: 4px;
+}

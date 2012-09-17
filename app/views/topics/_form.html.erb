@@ -1,6 +1,6 @@
 <%= form_for(@topic) do |f| %>
     <div class="error-mess-box">
-      <% @user.errors.each do |attr,msg| %>
+      <% @topic.errors.each do |attr,msg| %>
         <div class="error-list"><%= msg %></div><br />
       <% end %>
     </div>
