@@ -21,7 +21,7 @@
 														    	 <div class="user-name"><%= link_to topic.title, topic_path(topic), :target => '_blank' %></div>
 														    	 <div class="user-node">来自<%= topic.node.name %>的社区发言</div>
 														    </div>
-																<div class="topic-text"><%= topic.text %></div>
+																<div class="topic-text"><%= truncate(topic.text, :length => 600) %></div>
 												    </div>
                 </div>
 					  </div>

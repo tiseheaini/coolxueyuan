@@ -22,7 +22,7 @@
 														    <div class="user-title">
 														    	 <div class="user-name"><%= link_to topic.title, topic_path(topic), :target => '_blank' %></div>
 														    </div>
-																<div class="topic-text"><%= topic.text %></div>
+																<div class="topic-text"><%= truncate(topic.text, :length => 600) %></div>
 												    </div>
                 </div>
 					  </div>
