@@ -1,6 +1,6 @@
 # encoding: utf-8
 class Usermail < ActionMailer::Base
-  default from: "action@chengdeyixueyuan.com"
+  default from: "承德医学院社区"
 
 	def forget_password(user_name,user_qq)
 	  @user_name = user_name
