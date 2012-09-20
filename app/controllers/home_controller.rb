@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 	  @user = User.authentication(params[:login], params[:password])
 		if @user
 		  session[:user_id] = @user.id
-			redirect_to home_index_path
+			redirect_to topics_path
 	  else
 		  flash[:notice] = '你的帐号或密码有问题，请重新输入'
 			redirect_to new_login_path
