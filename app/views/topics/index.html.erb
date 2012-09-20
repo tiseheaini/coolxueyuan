@@ -18,10 +18,10 @@
 												</div>
                             <div class="list-content">
 														    <div class="user-title">
-														    	 <div class="user-name"><%= link_to topic.title, topic_path(topic), :target => '_blank' %></div>
-														    	 <div class="user-node">来自<%= topic.node.name %>的社区发言</div>
+														    	 <div class="user-name"><%=h link_to truncate(topic.title, :length => 15), topic_path(topic), :target => '_blank' %></div>
+														    	 <div class="user-node">来自<%=h topic.node.name %>的社区发言</div>
 														    </div>
-																<div class="topic-text"><%= truncate(topic.text, :length => 600) %></div>
+																<div class="topic-text"><%=h truncate(topic.text, :length => 600) %></div>
 												    </div>
                 </div>
 					  </div>

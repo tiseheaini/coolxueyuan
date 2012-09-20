@@ -25,7 +25,6 @@ class TopicsController < ApplicationController
   # GET /topics/new.json
   def new
     @topic = Topic.new
-		flash[:node] = params[:node]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,10 +42,10 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(params[:topic])
 		@topic.user_id = session[:user_id]
-		@topic.node_id = flash[:node]
+		@topic.node_id = User.find(session[:user_id]).node_id
 
       if @topic.save
-        redirect_to home_index_path
+        redirect_to topics_path
       else
         render(:action => :new)
       end
