@@ -1,6 +1,12 @@
 # encoding: utf-8
 class TopicsController < ApplicationController
-  skip_before_filter :validate_session, :only => [:show]
+  skip_before_filter :validate_session, :only => [:show, :index]
+
+  # GET /index
+  # GET /insex.json
+  def index
+    @topics = Topic.all
+	end
 
   # GET /topics/1
   # GET /topics/1.json

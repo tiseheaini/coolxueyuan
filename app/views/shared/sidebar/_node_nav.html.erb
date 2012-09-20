@@ -1,9 +1,0 @@
-<div class="sidebar-top"></div>
-    <div class="sidebar-cent">
-       <div class="node-nav">
-           <% node_ob.each do |n| %>
-             <%= link_to n.name, node_school_path(n, :node_name => n.name) %>
-           <% end %>
-       </div>
-   </div>
-<div class="sidebar-bottom"></div>
