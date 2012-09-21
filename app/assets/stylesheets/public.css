@@ -165,6 +165,9 @@
 .form-label {
   margin-left: 15px;
 }
+.form-sign {
+  margin-left: 167px;
+}
 .form-forget-password {
   margin-left: 100px;
 }
@@ -196,6 +199,11 @@
 }
 
 /* sidebar-node */
+.link-post { 
+ padding-left: 119px;
+ height: 20px;
+ }
+			
 .right-sidebar a {
   height: 28px;
 	text-decoration: none;

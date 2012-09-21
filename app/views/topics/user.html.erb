@@ -1,0 +1,43 @@
+<div id="home-nav">
+    <div id="home-nav-top"></div>
+        <div id="home-nav-cont">
+				    <%= link_to "首页", home_index_path %>
+        </div>
+    <div id="home-nav-bottom"></div>
+</div>
+<div class="wrap-left">
+    <div class="left-content">
+        <div class="left-content-top"></div>
+        
+        <div class="left-content-cent">
+				    <table>
+						    <tr class="topics-user-head">
+						    	<th class="topics-user-title">标题</th>
+						    	<th class="topics-user-replies">回复</th>
+									<th class="topics-user-delete">操作</th>
+						    </tr>
+                <% @topics.each do |t| %>
+								  <tr class="topics-user-table">
+                    <td class="topics-user-title"><%= truncate t.title, :length => 20 %></td>
+										<td class="topics-user-replies"><%= t.replies_count %></td>
+										<td class="topics-user-delete"><%= link_to '删除', t, :method => :delete %></td>
+									</tr>
+                <% end %>
+						</table>
+        </div>    
+        <div class="left-content-bottom"></div>
+    </div>
+</div>
+
+<div class="wrap-right">
+    <div class="right-sidebar">
+				<div class="sidebar-login">
+				    <%= render :partial => "shared/sidebar/post" %>
+				    <% if current_user %>
+						  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
+					  <% else %>
+              <%= render :partial => "shared/sidebar/form_login" %>
+					  <% end %>
+        </div>
+    </div>  
+</div>

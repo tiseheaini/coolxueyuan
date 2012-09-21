@@ -138,3 +138,29 @@
 #new_reply {
   margin-bottom: 12px;
 }
+.topics-user-head .topics-user-title {
+  text-align:left;
+	padding-left: 30px;
+}
+.topics-user-table td {
+  border-top:1px solid #DDD;
+	background-color:#F9F9F9;
+}
+.topics-user-title {
+  width: 481px;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.topics-user-replies {
+  width: 40px;
+	text-align:center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.topics-user-delete {
+  width: 40px;
+	text-align:center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

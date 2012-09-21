@@ -8,6 +8,11 @@ class TopicsController < ApplicationController
 	  @topics = Topic.order("updated_at DESC")
 	end
 
+	# GET /user:id
+	def user
+		@topics = Topic.all
+	end
+
   # GET /topics/1
   # GET /topics/1.json
   def show
@@ -74,7 +79,7 @@ class TopicsController < ApplicationController
     @topic.destroy
 
     respond_to do |format|
-      format.html { redirect_to topics_url }
+      format.html { redirect_to user_topics_url }
       format.json { head :no_content }
     end
   end

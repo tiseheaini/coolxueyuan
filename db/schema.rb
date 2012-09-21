@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120917114447) do
+ActiveRecord::Schema.define(:version => 20120920134223) do
 
   create_table "forgetpasswords", :force => true do |t|
     t.string   "user_name",                              :null => false
@@ -49,12 +49,13 @@ ActiveRecord::Schema.define(:version => 20120917114447) do
   end
 
   create_table "topics", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.integer  "node_id",    :null => false
+    t.integer  "user_id",                      :null => false
+    t.integer  "node_id",                      :null => false
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "replies_count", :default => 0
   end
 
   create_table "users", :force => true do |t|

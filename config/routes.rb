@@ -6,6 +6,7 @@ Coolxueyuan::Application.routes.draw do
 
   post "replies/create"
 
+	match "topics/user" => "topics#user", :as => :user_topics
   resources :topics do
     resources :replies
 	end
