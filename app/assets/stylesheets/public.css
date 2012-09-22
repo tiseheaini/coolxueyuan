@@ -194,8 +194,11 @@
 	margin-top: 10px;
 	float:right;
 }
-#sub-sign-out a {
+#sign-out-link a {
   margin-left: 235px;
+}
+.user-info-link {
+  margin-left: 156px;
 }
 
 /* sidebar-node */

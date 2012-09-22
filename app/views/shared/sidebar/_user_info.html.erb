@@ -9,12 +9,13 @@
             <div id="user-face">
 						    <%= link_to image_tag(current_user.photo_url(:thumb)), edit_user_path(@user)%>
 						</div>
-                <div id="user-mess">
-		                <span><%= @user.nickname %></span><br />
-		                <span>你有<%= link_to message_mess_count, messages_path %>条消息  <%= link_to "查看", messages_path %></span><br />
-		            </div>
+            <div id="user-mess">
+		            <span><%= @user.nickname %></span><br />
+		            <span>你有<%= link_to message_mess_count, messages_path %>条消息  <%= link_to "查看", messages_path %></span><br />
+		        </div>
 		        <div id="sub-sign-out">
-		            <%= link_to "退出", home_signout_path %>
+						    <%= link_to "个人信息", user_path(session[:user_id]), :class => "user-info-link" %>
+		            <%= link_to "退出", home_signout_path, :class => "sign-out-link" %>
 		        </div>
         </div>
     </div>
