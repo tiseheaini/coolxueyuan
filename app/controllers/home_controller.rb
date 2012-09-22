@@ -24,4 +24,8 @@ class HomeController < ApplicationController
 	def about_site
 		
 	end
+
+	def contact
+		
+	end
 end
