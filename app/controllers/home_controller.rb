@@ -20,4 +20,8 @@ class HomeController < ApplicationController
 	  session[:user_id] = nil
 		redirect_to :back
 	end
+
+	def about_site
+		
+	end
 end

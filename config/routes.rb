@@ -18,6 +18,7 @@ Coolxueyuan::Application.routes.draw do
   resources :login, :only => [:new, :create]
   resources :users, :except => [:index, :destroy]
 
+  match "home/about_site" => "home#about_site"
 	get  "home/signout"
   get  "home/index"
 	post "home/login"

@@ -32,6 +32,10 @@ body {
   height: 83px;
   margin:0 auto;
 }
+#footer-wrap a:link,a:visited {             
+  color: #006BB8;                
+  text-decoration: none;       
+}
 
 /* home#index */
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
