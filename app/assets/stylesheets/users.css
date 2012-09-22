@@ -129,6 +129,9 @@ form {
 .show-topics-title {
   padding-left: 4px;
 }
+.show-topics-manage {
+  margin-left: 394px;
+}
 .show-topics-line {
   width: auto;
 	margin-left: -18px;
