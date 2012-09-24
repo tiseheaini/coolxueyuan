@@ -1,6 +1,8 @@
 # encoding: utf-8
 class HomeController < ApplicationController
   skip_before_filter :validate_session
+	caches_page :about_site, :contact
+
   def index
 	  @topics = Topic.order("created_at DESC").limit(5)
   end
