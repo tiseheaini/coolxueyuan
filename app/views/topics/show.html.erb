@@ -10,11 +10,15 @@
         <% if flash[:notice] %>
           <%= render :partial => 'shared/topics/flash' %>
         <% end %>
-        <%= render :partial => 'shared/topics/article' %>
+				<% cache "topic-#{@topic.id}-#{@topic.updated_at.to_i}" do %>
+          <%= render :partial => 'shared/topics/article' %>
+				<% end %>
 				  <% if !@reply.blank? %>
 				    <%= render :partial => 'shared/topics/reply' %>
 				  <% end %>
-				<%= render :partial => 'shared/topics/btn_reply' %>
+				<% cache "btn_reply" do %>
+				  <%= render :partial => 'shared/topics/btn_reply' %>
+				<% end %>
 
     </div>
 </div>

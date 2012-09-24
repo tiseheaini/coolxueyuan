@@ -10,18 +10,22 @@
 <body>
 
 <div id="main">
-  <div id="header">
-    <%= render :partial => "shared/home/home_header" %>
-  </div>
+  <% cache "header" do %>
+    <div id="header">
+      <%= render :partial => "shared/home/home_header" %>
+    </div>
+	<% end %>
   <div id="content">
     <div class="c-wrap">
       <%= yield %>
     </div>
   </div>
 
-  <div id="footer">
-	  <%= render :partial => "shared/home/home_footer" %>
-	</div>
+  <% cache "footer" do %>
+    <div id="footer">
+	    <%= render :partial => "shared/home/home_footer" %>
+	  </div>
+	<% end %>
 
 </div>
 </body>

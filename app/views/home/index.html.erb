@@ -11,6 +11,7 @@
         
         <div class="left-content-cent">
 				    <% @topics.each do |topic| %>
+						<% cache "home-topic-#{topic.id}-#{topic.updated_at.to_i}" do %>
             <div class="feed-list">
 	              <div class="list-single">
                         <div class="list-face"><%= link_to image_tag(topic.user.photo_url(:thumb)), user_path(topic.user_id) %>
@@ -27,6 +28,7 @@
 					  </div>
 						<div class="line"></div>
 						<% end %>
+						<% end %>
         </div>
             
         <div class="left-content-bottom"></div>
@@ -37,9 +39,11 @@
     <div class="right-sidebar">
 				<div class="sidebar-login">
 				    <% if current_user %>
-						  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
+						  <% cache "user-info" do %>
+						    <%= render :partial => "shared/sidebar/user_info", :object => @user %>
+							<% end %>
 					  <% else %>
-              <%= render :partial => "shared/sidebar/form_login" %>
+                <%= render :partial => "shared/sidebar/form_login" %>
 					  <% end %>
         </div>
     </div>  

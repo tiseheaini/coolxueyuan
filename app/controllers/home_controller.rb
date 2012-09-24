@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 
   def signout
 	  session[:user_id] = nil
-		redirect_to :back
+		redirect_to home_index_path
 	end
 
 	def about_site
