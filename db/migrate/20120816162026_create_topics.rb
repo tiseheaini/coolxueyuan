@@ -8,5 +8,8 @@ class CreateTopics < ActiveRecord::Migration
 
       t.timestamps
     end
+
+		add_index :topics, :user_id
+		add_index :topics, :node_id
   end
 end

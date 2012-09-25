@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(:version => 20120920134223) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "replies", ["topic_id"], :name => "index_replies_on_topic_id"
+  add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
+
   create_table "topics", :force => true do |t|
     t.integer  "user_id",                      :null => false
     t.integer  "node_id",                      :null => false
@@ -57,6 +60,9 @@ ActiveRecord::Schema.define(:version => 20120920134223) do
     t.datetime "updated_at",                   :null => false
     t.integer  "replies_count", :default => 0
   end
+
+  add_index "topics", ["node_id"], :name => "index_topics_on_node_id"
+  add_index "topics", ["user_id"], :name => "index_topics_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "username",                         :null => false
@@ -76,5 +82,7 @@ ActiveRecord::Schema.define(:version => 20120920134223) do
     t.datetime "updated_at",                       :null => false
     t.string   "about"
   end
+
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end
