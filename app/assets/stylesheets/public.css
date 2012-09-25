@@ -112,6 +112,20 @@
   margin-top: 40px;
   margin-left: 28px;
 }
+
+/**will-paginate**/ 
+.pagination {
+  text-align:center;
+}
+.left-content-cent .pagination a,.pagination em {
+  display:inline-block;
+  padding: 10px;
+}
+.left-content-cent .pagination a:link,a:visited {
+  color: #006BB8;
+  text-decoration: none;
+}
+
 /* sidebar */
 .sidebar-login {
   width: 100%;

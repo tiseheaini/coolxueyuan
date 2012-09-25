@@ -32,14 +32,16 @@
 							:node_id => '3', 
 							:schooldate => '2012-08-27 10:34:50')
 	
-	30.times do |n|
+	Topic.delete_all
+
+	300.times do |n|
 		Topic.create(:user_id => '1',
 		             :node_id => '1',
 								 :title => "#{n}主题",
 								 :text => "第#{n}个内容")
 	end
 
-	30.times do |n|
+	300.times do |n|
 		Topic.create(:user_id => '2',
 		             :node_id => '1',
 								 :title => "#{n}主题",
