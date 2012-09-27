@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.find_all_by_receiveuser(session[:user_id])
+    @messages = Message.where(:receiveuser => session[:user_id]).paginate(:page => params[:page] , :per_page => 15)
 		@messages.each do |m|
 		  m.read = true
 			m.save
