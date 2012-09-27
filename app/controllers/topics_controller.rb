@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
   # GET /index
   # GET /insex.json
   def index
-	  @topics = User.find(session[:user_id]).topics.order("updated_at DESC").limit(30)
+	  @topics = Topic.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
 	end
 
 	# GET /user:id
