@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-		@topics = Topic.find_all_by_id(@user)
+		@topics = Topic.where(:user_id => @user).order("created_at DESC").limit(15)
 
     respond_to do |format|
       format.html # show.html.erb
