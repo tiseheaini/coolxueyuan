@@ -76,7 +76,11 @@ class TopicsController < ApplicationController
   # DELETE /topics/1.json
   def destroy
     @topic = Topic.find(params[:id])
-    @topic.destroy
+    if @topic.destroy
+    	expire_fragment("home-topic-#{@topic.id}-#{@topic.updated_at.to_i}")
+    	expire_fragment("topic-#{@topic.id}-#{@topic.updated_at.to_i}")
+    	expire_fragment("topic#{@topic.id}-btn-reply")
+    end
 
     respond_to do |format|
       format.html { redirect_to user_topics_url }
