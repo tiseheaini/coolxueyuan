@@ -80,6 +80,10 @@ class TopicsController < ApplicationController
     	expire_fragment("home-topic-#{@topic.id}-#{@topic.updated_at.to_i}")
     	expire_fragment("topic-#{@topic.id}-#{@topic.updated_at.to_i}")
     	expire_fragment("topic#{@topic.id}-btn-reply")
+
+			@topic.replies.each do |reply|
+    	  expire_fragment("topic#{@topic.id}-reply#{reply.id}")
+			end
     end
 
     respond_to do |format|
