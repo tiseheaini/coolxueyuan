@@ -82,6 +82,18 @@
   left: 21px;
   z-index: 1;
 }
+.mail-sub {
+	width: 53px;
+	height: 19px;
+  display:inline-block;
+	margin-left: 4px;
+	margin-top: 2px;
+	text-align:center;
+	padding-top: 1px;
+	background-image:url(button.png);
+	background-repeat:no-repeat;
+	background-position:0px -120px;
+}
 img,a {
   border: 0px;
 }
@@ -178,6 +190,10 @@ img,a {
 	height: 28px;
 	margin-left: 6px;
 	margin-top: 2px;
+	background-image:url(button.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	border: 0px;
 }
 .form-label {
   margin-left: 15px;

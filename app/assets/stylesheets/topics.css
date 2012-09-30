@@ -48,20 +48,23 @@
   width: 90px;
 	height: 30px;
 	float: left;
+	background-image:url(button.png);
+	background-repeat:no-repeat;
+	background-position:0px -90px;
+	border: 0px;
 }
 .link-h {
   width: 43px;
   height: 23px;
-	float: right;
-}
-.link-h a {
-  width: 43px;
-  height: 23px;
+	text-decoration: none;
   float: right;
   cursor: auto;
-  background-color: #778087;   
   padding-top: 7px;            
   padding-left: 17px;          
+	background-image:url(button.png);
+	background-repeat:no-repeat;
+	background-position:0px -180px;
+	border: 0px;
 }   
 /* topics  show */
 /* topics  show */
@@ -131,6 +134,10 @@
 	margin-top: 31px;
 	margin-right: 12px;
 	float:right;
+	background-image:url(button.png);
+	background-repeat:no-repeat;
+	background-position:0px -60px;
+	border: 0px;
 }
 .reply-mess {
   padding-left: 16px;
