@@ -82,6 +82,9 @@
   left: 21px;
   z-index: 1;
 }
+img,a {
+  border: 0px;
+}
 .list-content {
   width: 490px;
   height: auto;
@@ -178,9 +181,6 @@
 }
 .form-label {
   margin-left: 15px;
-}
-.form-sign {
-  margin-left: 167px;
 }
 .form-forget-password {
   margin-left: 100px;
