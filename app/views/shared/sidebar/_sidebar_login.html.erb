@@ -1,0 +1,10 @@
+<div class="sidebar-login">
+    <% if current_user %>
+      <%= render :partial => "shared/sidebar/post" %>
+		  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
+	  <% else %>
+		  <% cache "form_login" do %>
+        <%= render :partial => "shared/sidebar/form_login" %>
+			<% end %>
+	  <% end %>
+</div>
