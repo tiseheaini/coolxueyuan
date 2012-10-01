@@ -39,11 +39,13 @@
 <div class="wrap-right">
     <div class="right-sidebar">
 				<div class="sidebar-login">
-				    <%= render :partial => "shared/sidebar/post" %>
 				    <% if current_user %>
+				      <%= render :partial => "shared/sidebar/post" %>
 						  <%= render :partial => "shared/sidebar/user_info", :object => @user %>
 					  <% else %>
-              <%= render :partial => "shared/sidebar/form_login" %>
+						  <% cache "form_login" do %>
+                <%= render :partial => "shared/sidebar/form_login" %>
+							<% end %>
 					  <% end %>
         </div>
     </div>  
