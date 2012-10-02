@@ -58,7 +58,7 @@
   height: 23px;
 	text-decoration: none;
   float: right;
-  cursor: auto;
+  cursor: pointer;
   padding-top: 7px;            
   padding-left: 17px;          
 	background-image:url(button.png);

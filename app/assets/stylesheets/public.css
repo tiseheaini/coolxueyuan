@@ -25,7 +25,7 @@
 #home-nav-cont a {
 	text-decoration: none;
 	display:inline-block;
-  cursor: auto;
+  cursor: pointer;
 }
 #home-nav-bottom{
   width: 100%;
@@ -254,7 +254,7 @@ img,a {
   height: 28px;
 	text-decoration: none;
 	display:inline-block;
-  cursor: auto;
+  cursor: pointer;
 }
 .right-sidebar a:link,a:visited {             
   color: #006BB8;                
