@@ -5,14 +5,20 @@
         </div>
         <div class="form-line"></div>
             <%= form_tag home_login_path do -%>
-              <label for="login" class="form-label" >帐号</label>
+						  <div class="field">
+                <label for="login" class="form-label" >帐号：</label>
 	              <%= text_field_tag :login, params[:login] %><br />
-              <label for="password" class="form-label" >密码</label>
+							</div>
+						  <div class="field">
+                <label for="password" class="form-label" >密码：</label>
 	              <%= password_field_tag :password, params[:password] %><br />
+							</div>
 		
+              <div class="actions">
 								<%= link_to "忘记密码", users_forget_password_path, :class => "form-forget-password" %>
 		            <%= link_to "注册", new_user_path, :class => "form-sign" %>
 	              <%= submit_tag "登录", :class => "form-submit" %>
+              </div>
             <% end %>
     </div>
 <div class="sidebar-bottom"></div>

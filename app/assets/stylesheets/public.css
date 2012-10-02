@@ -85,6 +85,8 @@
 .mail-sub {
 	width: 53px;
 	height: 19px;
+	color:whiteSmoke;
+	text-decoration:none;
   display:inline-block;
 	margin-left: 4px;
 	margin-top: 2px;
@@ -180,7 +182,7 @@ img,a {
 	margin-bottom: 12px;
 }
 #login,#password {
-  width: 213px;
+  width: 205px;
 	height: 25px;
 	margin-left: 0px;
 	margin-bottom: 8px;
@@ -196,10 +198,21 @@ img,a {
 	border: 0px;
 }
 .form-label {
-  margin-left: 15px;
+  width: 58px;
+	height: 15px;
+	padding-top: 7px;
+	float:left;
+	text-align:right;
 }
 .form-forget-password {
-  margin-left: 100px;
+	float:left;
+  padding-top: 7px;
+  margin-left: 97px;
+}
+.form-sign {
+  float:left;
+	margin-left: 8px;
+	padding-top: 7px;
 }
 
 /* _user_info.html.erb */
