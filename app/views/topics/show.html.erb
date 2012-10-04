@@ -18,10 +18,7 @@
 				  <% if !@reply.blank? %>
 				    <%= render :partial => 'shared/topics/reply' %>
 				  <% end %>
-				<% cache "topic#{@topic.id}-btn-reply" do %>
 				  <%= render :partial => 'shared/topics/btn_reply' %>
-				<% end %>
-
     </div>
 </div>
 
