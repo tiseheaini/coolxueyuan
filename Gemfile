@@ -10,7 +10,8 @@ gem 'therubyracer'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'mail','2.4.4'
-gem 'mysql2'
+#gem 'mysql2'
+gem "mongoid", "~> 3.0.0"
 
 # 分页
 gem "will_paginate", "~> 3.0.3"

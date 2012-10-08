@@ -1,4 +1,12 @@
-class Reply < ActiveRecord::Base
+class Reply
+  include Mongoid::Document
+	include Mongoid::Timestamps
+	include Mongoid::CounterCache
+
+	field :user_id,  :type => Integer
+	field :topic_id, :type => Integer
+	field :text,     :type => String
+
   belongs_to :topic, :counter_cache => true
 	belongs_to :user
 

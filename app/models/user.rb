@@ -1,5 +1,23 @@
 # encoding: utf-8
-class User < ActiveRecord::Base
+class User
+  include Mongoid::Document
+	include Mongoid::Timestamps
+	include Mongoid::CounterCache
+
+	field :username,    :type => String
+	field :nickname,    :type => String
+	field :password_hash,    :type => String
+	field :password_salt,    :type => String
+	field :state,    :type => String
+	field :city,    :type => String
+	field :photo,    :type => String
+	field :gender, :type => Boolean
+	field :qq,    :type => String
+	field :node_id, :type => Integer
+	field :schooldate,    :type => String
+	field :monitor, :type => Boolean
+	field :admin, :type => Boolean
+	field :about,    :type => String
   has_many :topics
 	has_many :replies
 	belongs_to :node
