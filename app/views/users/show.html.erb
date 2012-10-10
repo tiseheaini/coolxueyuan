@@ -11,7 +11,7 @@
   	  	<div class="left-content-top"></div>
   	    	<div class="left-content-cent">
 					    <div class="show-title">
-					    	  <div class="show-face"><%= image_tag @user.photo_url(:thumb) %></div>
+					    	  <div class="show-face"><%= image_tag @user[0].photo_url(:thumb) %></div>
 					    	  <div class="show-name"><span>昵称：</span><%= @user.nickname %></div>
 					    	  <div class="show-state"><span>院系：</span><%= @user.node.name %></div>
 					    </div>

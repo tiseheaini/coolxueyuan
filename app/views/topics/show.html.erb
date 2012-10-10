@@ -12,7 +12,7 @@
         <% if flash[:notice] %>
           <%= render :partial => 'shared/topics/flash' %>
         <% end %>
-				<% cache "topic-#{@topic.id}-#{@topic.updated_at.to_i}" do %>
+				<% cache "topic-#{@topic[0].id}-#{@topic[0].updated_at.to_i}" do %>
           <%= render :partial => 'shared/topics/article' %>
 				<% end %>
 				  <% if !@reply.blank? %>

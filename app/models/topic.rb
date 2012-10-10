@@ -13,7 +13,7 @@ class Topic
   belongs_to :user
 	belongs_to :node
 	counter_cache :name => :node, :inverse_of => :topics
-	has_many :replies
+	has_many :replies, :dependent => :destroy
 
   attr_accessible :node_id, :text, :title, :user_id
 

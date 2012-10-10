@@ -14,13 +14,11 @@
 						<% cache "home-topic-#{topic.id}-#{topic.updated_at.to_i}" do %>
             <div class="feed-list">
 	              <div class="list-single">
-                        <div class="list-face"><%= link_to image_tag(topic.user.photo_url(:thumb)), user_path(topic.user_id) %>
 												    <%= link_to "悄悄话", new_message_path(:receive_id => topic.user), :class => "mail-sub" %>
 												</div>
                             <div class="list-content">
 														    <div class="user-title">
 														    	 <div class="user-name"><%=h link_to truncate(topic.title, :length => 15), topic_path(topic), :target => '_blank' %></div>
-														    	 <div class="user-node">来自<%=h topic.node.name %>的社区发言</div>
 														    </div>
 																<div class="topic-text"><%=h truncate(topic.text, :length => 600) %></div>
 												    </div>

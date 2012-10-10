@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
   # GET /index
   # GET /insex.json
   def index
-	  @topics = Topic.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
+	  @topics = Topic.all.paginate(:page => params[:page], :per_page=> 15)
 	end
 
 	# GET /user:id
@@ -16,8 +16,8 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    @topic = Topic.find(params[:id])
-		@reply = @topic.replies.order
+    @topic = Topic.find_by(:id => params[:id])
+		@reply = @topic[0].replies.asc(:created_at)
 		@reply_new = Reply.new
 
     respond_to do |format|

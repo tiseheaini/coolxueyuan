@@ -11,7 +11,6 @@
 						</div>
             <div id="user-mess">
 		            <span><%= @user.nickname %></span><br />
-		            <span>你有<%= link_to message_mess_count, messages_path %>条消息  <%= link_to "查看", messages_path %></span><br />
 		        </div>
 		        <div id="sub-sign-out">
 						    <%= link_to "个人信息", user_path(session[:user_id]), :class => "user-info-link" %>

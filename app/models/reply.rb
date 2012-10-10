@@ -7,7 +7,8 @@ class Reply
 	field :topic_id, :type => Integer
 	field :text,     :type => String
 
-  belongs_to :topic, :counter_cache => true
+  belongs_to :topic
+	counter_cache :name => :topic, :inverse_of => :topics
 	belongs_to :user
 
   attr_accessible :text, :topic_id, :user_id

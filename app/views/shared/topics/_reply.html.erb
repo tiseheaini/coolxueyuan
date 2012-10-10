@@ -5,7 +5,7 @@
 					  <div class="reply">
 				        <% if !@reply.blank? %>
 				          <% @reply.each do |reply| %>
-									<% cache "topic#{@topic.id}-reply#{reply.id}" do %>
+									<% cache "topic#{@topic[0].id}-reply#{reply.id}" do %>
 								      <div class="reply-list">
 									        <div class="reply-photo"><%= link_to(image_tag(reply.user.photo_url(:small)),
 										                                             user_path(reply.user.id)) %></div>

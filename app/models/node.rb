@@ -8,6 +8,6 @@ class Node
 
   attr_accessible :name
 
-	has_many :topics
+	has_many :topics, :validate => false, :dependent => :destroy
 	has_many :users
 end

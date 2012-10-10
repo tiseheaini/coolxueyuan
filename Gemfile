@@ -12,6 +12,7 @@ gem 'rmagick'
 gem 'mail','2.4.4'
 #gem 'mysql2'
 gem "mongoid", "~> 3.0.0"
+gem "bson_ext", "~> 1.5"
 
 # 分页
 gem "will_paginate", "~> 3.0.3"

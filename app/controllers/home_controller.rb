@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 	caches_page :about_site, :contact
 
   def index
-	  @topics = Topic.all
+	  @topics = Topic.all.paginate(:page => params[:page], :per_page=> 15)
   end
   
 	def login
